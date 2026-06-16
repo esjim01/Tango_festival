@@ -56,9 +56,9 @@ function tarjetaTalentoHtml(persona) {
     const rolMostrado = normalizarRol(persona.rol) === 'profesor' ? 'Instructor' : persona.rol;
     return `
         <div class="bg-black/40 border border-gold/20 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between group hover:border-gold/50 transition-all duration-500 backdrop-blur-sm">
-            <div class="h-56 w-full overflow-hidden bg-stone-950 relative">
-                <img src="${persona.foto}" alt="${persona.nombre}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+            <div class="h-48 w-full overflow-hidden bg-stone-950/30 relative p-4">
+                <img src="${persona.foto}" alt="${persona.nombre}" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 relative z-10">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </div>
             <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
