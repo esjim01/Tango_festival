@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colombia Tango Festival</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f1d592;
+            --gold-dark: #996515;
+            --bordeaux: #700101;
+            --bordeaux-light: #9c0c0c;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+        
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
+        }
+        
+        .text-gold { color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        
+        .package-title-border {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .package-title-border::before, .package-title-border::after {
+            content: "";
+            height: 2px;
+            flex: 1;
+            background: linear-gradient(to var(--direction, right), transparent, var(--gold));
+        }
+        .package-title-border::after { --direction: left; }
+
+        .pricing-gold {
+            background: var(--gold);
+            color: black;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+        }
+        .pricing-red {
+            background: var(--bordeaux);
+            color: white;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+        }
+
+        /* Ambient background texture */
+        body {
+            background-color: #0a0a0a;
+            background-image: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #0a0a0a 100%);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #1c1917; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-black text-stone-100 font-sans selection:bg-gold selection:text-black">
+
+    <header class="relative min-h-screen w-full overflow-hidden bg-black flex items-center justify-center">
+        <!-- Fondo con efecto de desenfoque y duplicación -->
+        <div id="hero-background-container" class="absolute inset-0 z-0">
+            <div id="hero-bg-blurred" class="absolute inset-0 w-full h-full bg-cover bg-center opacity-30 scale-110 blur-xl"></div>
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Contenido principal centrado -->
+        <div class="relative z-20 max-w-6xl w-full flex flex-col items-center px-4">
+            
+            <!-- Contenedor de la Imagen Flotante (Cuerpo completo) -->
+            <div class="relative w-full max-w-[320px] sm:max-w-[450px] aspect-[2/3] mb-8 group">
+                <img id="hero-principal" src="" alt="Festival de Tango" 
+                     class="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(212,175,55,0.3)] hidden transform transition-transform duration-700 group-hover:scale-105">
+                
+                <!-- Overlay de gradiente inferior para fundir la imagen si es necesario -->
+                <div class="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Textos y Botones inferiores (Como en la referencia) -->
+            <div class="text-center space-y-4">
+                <p class="text-gold text-[10px] sm:text-xs tracking-[0.5em] uppercase font-bold opacity-80">Colombia Tango Festival</p>
+                <h1 class="text-2xl sm:text-4xl md:text-5xl font-serif text-white font-light tracking-tight px-4 leading-tight">
+                    Vive la pasión del tango en Medellín
+                </h1>
+                
+                <div class="flex items-center justify-center gap-2 text-gold text-xs sm:text-sm font-bold mt-2">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Llegada 10/26, Salida 11/02</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8 px-6">
+                    <a href="#modal-inscripcion" onclick="abrirModalManual()" class="bg-gold-gradient text-black font-black px-10 py-4 rounded-full shadow-2xl uppercase tracking-widest text-[10px] hover:brightness-110 transition-all">
+                        Inscríbete ahora
+                    </a>
+                    <a href="#paquetes" class="border border-white/30 text-white font-bold px-10 py-4 rounded-full uppercase tracking-widest text-[10px] hover:bg-white/10 transition-all">
+                        Ver Paquetes
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Cuenta Regresiva -->
+    <section class="max-w-4xl mx-auto -mt-16 relative z-30 px-4">
+        <div class="bg-stone-900/90 backdrop-blur-md border border-gold/30 rounded-3xl p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] text-center">
+            <h2 class="text-gold text-[10px] sm:text-xs font-bold uppercase tracking-[0.5em] mb-6">Faltan para el Gran Inicio</h2>
+            
+            <div id="cuenta-regresiva" class="flex justify-center items-center gap-4 sm:gap-10">
+                <div class="flex flex-col">
+                    <span id="meses" class="text-3xl sm:text-5xl font-serif font-bold text-white">00</span>
+                    <span class="text-[9px] sm:text-[10px] text-stone-500 uppercase tracking-widest mt-2">Meses</span>
+                </div>
+                <div class="h-10 w-[1px] bg-gold/20"></div>
+                <div class="flex flex-col">
+                    <span id="dias" class="text-3xl sm:text-5xl font-serif font-bold text-white">00</span>
+                    <span class="text-[9px] sm:text-[10px] text-stone-500 uppercase tracking-widest mt-2">Días</span>
+                </div>
+                <div class="h-10 w-[1px] bg-gold/20"></div>
+                <div class="flex flex-col">
+                    <span id="horas" class="text-3xl sm:text-5xl font-serif font-bold text-white">00</span>
+                    <span class="text-[9px] sm:text-[10px] text-stone-500 uppercase tracking-widest mt-2">Horas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 py-16">
+        
+        <section id="paquetes" class="mb-24">
+            <div class="package-title-border mb-12">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-center text-gold uppercase tracking-[0.2em]">Paquetes del Festival</h2>
+            </div>
+            <p class="text-center text-stone-400 text-xs font-bold mb-16 tracking-[0.3em] uppercase">Todo incluido para vivir el tango al máximo</p>
+            
+            <div id="contenedor-paquetes" class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto px-4">
+            </div>
+        </section>
+
+        <!-- Sección de Características Comunes -->
+        <section class="mb-24 border-t border-b border-gold/20 py-16">
+            <h3 class="text-center text-gold text-sm font-bold tracking-[0.3em] uppercase mb-12">Ambos paquetes incluyen:</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+                <div class="space-y-3">
+                    <i class="fas fa-music text-gold text-2xl"></i>
+                    <p class="text-[10px] uppercase tracking-wider text-stone-300">Milongas Inolvidables</p>
+                </div>
+                <div class="space-y-3">
+                    <i class="fas fa-graduation-cap text-gold text-2xl"></i>
+                    <p class="text-[10px] uppercase tracking-wider text-stone-300">Maestros Internacionales</p>
+                </div>
+                <div class="space-y-3">
+                    <i class="fas fa-users text-gold text-2xl"></i>
+                    <p class="text-[10px] uppercase tracking-wider text-stone-300">Nuevos amigos</p>
+                </div>
+                <div class="space-y-3">
+                    <i class="fas fa-map-marked-alt text-gold text-2xl"></i>
+                    <p class="text-[10px] uppercase tracking-wider text-stone-300">Turismo en Medellín</p>
+                </div>
+                <div class="space-y-3">
+                    <i class="fas fa-heart text-gold text-2xl"></i>
+                    <p class="text-[10px] uppercase tracking-wider text-stone-300">Pasión y diversión</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Carrusel de Banners -->
+        <section class="mb-24 overflow-hidden rounded-3xl border border-gold/10 shadow-2xl relative">
+            <div id="carrusel-imagenes" class="flex transition-transform duration-1000 ease-in-out h-[300px] sm:h-[450px]">
+                <!-- Las imágenes se cargan dinámicamente desde app.js -->
+            </div>
+            <!-- Overlay decorativo -->
+            <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/40 to-transparent"></div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-serif font-bold text-center text-amber-500 mb-2 uppercase tracking-wider">Elenco Oficial</h2>
+            <p class="text-center text-stone-400 mb-10 text-sm">Conoce y califica a nuestros Profesores, DJs y Taxi Dancers</p>
+
+            <div class="space-y-10">
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-stone-100 mb-4 uppercase tracking-wider">Instructores</h3>
+                    <div id="contenedor-instructores" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-stone-100 mb-4 uppercase tracking-wider">Taxi Dancers</h3>
+                    <div id="contenedor-taxi-dancers" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-stone-100 mb-4 uppercase tracking-wider">DJs</h3>
+                    <div id="contenedor-djs" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto bg-stone-900/40 border border-stone-800 p-6 rounded-2xl shadow-2xl text-center">
+            <h2 class="text-2xl font-serif font-bold text-amber-500 mb-2 uppercase">Inscripción 100% desde los paquetes</h2>
+            <p class="text-stone-300 text-sm">Selecciona un paquete y pulsa <strong>Inscríbete</strong> para abrir el formulario de pago seguro dentro de la página.</p>
+        </section>
+    </main>
+
+    <div id="modal-inscripcion" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-2 sm:p-4">
+        <div class="bg-stone-900 border border-stone-800 w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden relative max-h-[95vh] flex flex-col">
+            
+            <div class="bg-stone-950 p-4 sm:p-6 border-b border-stone-800 flex justify-between items-center shrink-0">
+                <div>
+                    <h3 id="modal-titulo-paquete" class="text-lg sm:text-xl font-serif font-bold text-gold uppercase tracking-wider">Inscripción</h3>
+                    <p class="text-[10px] text-stone-400 mt-1">Completa el formulario de pago seguro.</p>
+                </div>
+                <button onclick="cerrarModal()" class="text-stone-500 hover:text-stone-300 transition-colors text-xl p-2"><i class="fas fa-times"></i></button>
+            </div>
+
+            <form id="form-modal-pago" class="p-4 sm:p-6 space-y-4 overflow-y-auto custom-scrollbar">
+                <div id="contenedor-seleccion-paquete" class="hidden">
+                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1">Selecciona tu Paquete</label>
+                    <select id="modal-paquete-id" class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                        <!-- Se llena dinámicamente -->
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1">Nombre Completo</label>
+                    <input type="text" id="modal-nombre" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1">Correo Electrónico</label>
+                        <input type="email" id="modal-email" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1">Teléfono</label>
+                        <input type="tel" id="modal-telefono" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-stone-800">
+                    <span class="text-stone-400 text-xs font-semibold block mb-3"><i class="fas fa-lock text-emerald-600 mr-1"></i> Pago con Tarjeta de Crédito (Simulación Segura)</span>
+                    <div class="mb-3">
+                        <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Método de Pago</label>
+                        <select id="modal-metodo-pago" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                            <option value="credito">Tarjeta de crédito</option>
+                            <option value="debito">Tarjeta débito</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Titular de la Tarjeta</label>
+                        <input type="text" id="modal-tarjeta-titular" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Número de Tarjeta</label>
+                        <div class="relative">
+                            <input type="text" id="modal-tarjeta-numero" placeholder="•••• •••• •••• ••••" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                            <i class="fab fa-cc-visa absolute right-3 top-3 text-stone-600"></i>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Fecha Vencimiento</label>
+                            <input type="text" id="modal-tarjeta-exp" placeholder="MM/AA" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Código CVC / CVV</label>
+                            <input type="password" id="modal-tarjeta-cvv" placeholder="•••" maxLength="4" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Referencia de Pago</label>
+                        <textarea id="modal-referencia" rows="2" class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500" placeholder="Ej: Banco, transacción, observaciones"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-3 rounded-lg text-sm uppercase tracking-wider transition-colors mt-2">Pagar e Inscribirme</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para Calificación -->
+    <div id="modal-calificacion" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-stone-900 border border-stone-800 w-full max-w-md rounded-2xl shadow-2xl overflow-hidden relative">
+            <div class="bg-stone-950 p-6 border-b border-stone-800 flex justify-between items-center">
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-gold uppercase tracking-wider">Calificar</h3>
+                    <p class="text-[10px] text-stone-400 mt-1">Déjanos tus datos para registrar tu voto.</p>
+                </div>
+                <button onclick="cerrarModalCalificacion()" class="text-stone-500 hover:text-stone-300 transition-colors text-xl p-2"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="form-calificacion" class="p-6 space-y-4">
+                <input type="hidden" id="calif-talento-id">
+                <input type="hidden" id="calif-estrellas">
+                <div>
+                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1">Nombre Completo</label>
+                    <input type="text" id="calif-nombre" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1">Teléfono</label>
+                    <input type="tel" id="calif-telefono" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                </div>
+                <div class="text-center py-2">
+                    <p class="text-stone-400 text-xs mb-2">Tu calificación:</p>
+                    <div id="calif-estrellas-display" class="text-gold text-2xl"></div>
+                </div>
+                <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-3 rounded-lg text-sm uppercase tracking-wider transition-colors">Enviar Calificación</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-stone-900 border-t border-stone-800 py-8 px-6 mt-20 text-center text-sm text-stone-400">
+        <p id="footer-texto" class="mb-2"></p>
+        <p id="footer-contacto" class="text-xs text-stone-500"></p>
+    </footer>
+
+    <a id="btn-whatsapp" href="#" target="_blank" class="fixed bottom-6 right-6 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl z-50"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="app.js"></script>
+</body>
+</html>

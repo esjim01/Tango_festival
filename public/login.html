@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Colombia Tango Festival</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f1d592;
+            --gold-dark: #996515;
+            --bordeaux: #700101;
+            --bordeaux-light: #9c0c0c;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+        
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-light) 100%);
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            background-image: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #0a0a0a 100%);
+        }
+    </style>
+</head>
+<body class="bg-black text-stone-100 font-sans min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-md w-full bg-stone-900/50 backdrop-blur-md border border-gold/20 rounded-3xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+        <div class="text-center mb-8">
+            <p class="text-gold text-[10px] tracking-[0.5em] uppercase font-bold opacity-80 mb-2">Administración</p>
+            <h1 class="text-3xl font-serif text-white font-light tracking-tight">Colombia Tango Festival</h1>
+        </div>
+
+        <form id="login-form" class="space-y-6">
+            <div>
+                <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-2">Usuario</label>
+                <div class="relative">
+                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-stone-500"><i class="fas fa-user"></i></span>
+                    <input type="text" id="username" required 
+                           class="w-full bg-stone-950 border border-stone-800 rounded-xl pl-12 pr-4 py-3 text-sm text-stone-200 focus:outline-none focus:border-gold transition-colors"
+                           placeholder="Ingresa tu usuario">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-2">Contraseña</label>
+                <div class="relative">
+                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-stone-500"><i class="fas fa-lock"></i></span>
+                    <input type="password" id="password" required 
+                           class="w-full bg-stone-950 border border-stone-800 rounded-xl pl-12 pr-4 py-3 text-sm text-stone-200 focus:outline-none focus:border-gold transition-colors"
+                           placeholder="••••••••">
+                </div>
+            </div>
+
+            <div id="error-message" class="hidden text-red-500 text-xs text-center bg-red-500/10 py-2 rounded-lg border border-red-500/20">
+                Credenciales incorrectas
+            </div>
+
+            <button type="submit" 
+                    class="w-full bg-gold-gradient text-black font-black py-4 rounded-xl shadow-2xl uppercase tracking-widest text-[10px] hover:brightness-110 transition-all">
+                Entrar al Panel
+            </button>
+        </form>
+
+        <div class="mt-8 text-center">
+            <a href="/" class="text-stone-500 hover:text-gold text-[10px] uppercase tracking-widest transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i> Volver a la Landing
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMsg = document.getElementById('error-message');
+
+            try {
+                const res = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                if (res.ok) {
+                    window.location.href = '/admin';
+                } else {
+                    errorMsg.classList.remove('hidden');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Error al conectar con el servidor');
+            }
+        });
+    </script>
+</body>
+</html>

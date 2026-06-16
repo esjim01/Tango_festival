@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control Maestro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; height: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #1c1917; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+        body {
+            background-color: #0c0a09;
+            background-image: radial-gradient(circle at 50% -20%, #1c1917 0%, #0c0a09 100%);
+        }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-100 font-sans p-2 sm:p-4 md:p-8">
+
+    <header class="max-w-[1500px] mx-auto mb-10 flex flex-col md:flex-row justify-between items-start md:items-center border-b border-stone-800 pb-6 gap-6 px-2">
+        <div>
+            <h1 class="text-2xl sm:text-3xl font-serif font-bold text-amber-500 uppercase tracking-tight">Administración Maestro</h1>
+            <p class="text-stone-400 text-xs sm:text-sm">Control absoluto de la Landing Page del Festival.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+            <button id="btn-exportar-calificaciones" class="bg-amber-600 hover:bg-amber-500 text-white text-[10px] font-bold px-6 py-3 rounded-lg flex items-center justify-center transition-colors uppercase"><i class="fas fa-star mr-2 text-sm"></i> Exportar Calificaciones</button>
+            <button id="btn-exportar" class="bg-emerald-700 hover:bg-emerald-600 text-white text-[10px] font-bold px-6 py-3 rounded-lg flex items-center justify-center transition-colors uppercase"><i class="fas fa-file-excel mr-2 text-sm"></i> Exportar Inscritos</button>
+            <button id="btn-logout" class="bg-red-800 hover:bg-red-700 text-white text-[10px] font-bold px-6 py-3 rounded-lg flex items-center justify-center transition-colors uppercase"><i class="fas fa-sign-out-alt mr-2 text-sm"></i> Salir</button>
+        </div>
+    </header>
+
+    <main class="max-w-[1500px] mx-auto grid grid-cols-1 xl:grid-cols-12 gap-8">
+        
+        <div class="space-y-6 xl:col-span-3">
+            <div class="bg-stone-900 border border-stone-800 p-6 rounded-xl shadow-xl">
+                <h3 class="text-md font-bold text-amber-500 mb-4 uppercase tracking-wider"><i class="fas fa-sliders-h mr-2"></i>Diseño y Footer</h3>
+                <form id="form-config-avanzada" class="space-y-3">
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Fotos del Carrusel (Actuales)</label>
+                        <div id="preview-banners" class="flex gap-2 overflow-x-auto p-2 bg-stone-950 rounded-lg mb-2 custom-scrollbar min-h-[60px]">
+                            <p class="text-[9px] text-stone-600">Cargando imágenes...</p>
+                        </div>
+                        <input type="file" id="admin-banners-files" multiple accept="image/*" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500 text-stone-300">
+                        <p class="text-[10px] text-stone-500 mt-1">Al guardar, las imágenes seleccionadas se añadirán a las existentes.</p>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Imagen principal del Head (Actual)</label>
+                        <div id="preview-hero" class="mb-2 bg-stone-950 rounded-lg overflow-hidden border border-stone-800 max-h-[100px] flex items-center justify-center">
+                            <p class="text-[9px] text-stone-600 p-4">Cargando imagen...</p>
+                        </div>
+                        <input type="file" id="admin-hero-file" accept="image/*" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500 text-stone-300">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Texto de Derechos (Footer)</label>
+                        <input type="text" id="admin-footer-texto" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Información de Contacto (Footer)</label>
+                        <input type="text" id="admin-footer-contacto" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">WhatsApp Link</label>
+                        <input type="url" id="admin-whatsapp" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                    </div>
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-2 rounded-lg text-xs uppercase tracking-wider">Guardar Cambios Visuales</button>
+                </form>
+                <div class="mt-4 text-[11px] text-stone-500" id="estado-config"></div>
+            </div>
+
+            <div class="bg-stone-900 border border-stone-800 p-6 rounded-xl shadow-xl">
+                <h3 id="titulo-form-talento" class="text-md font-bold text-amber-500 mb-4 uppercase tracking-wider"><i class="fas fa-plus mr-2"></i>Agregar al Elenco</h3>
+                <form id="form-agregar-talento" class="space-y-3">
+                    <input type="hidden" id="edit-talento-id">
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Nombre Completo</label>
+                        <input type="text" id="nuevo-nombre" required class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Rol / Categoría</label>
+                        <select id="nuevo-rol" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                            <option value="instructor">Instructor / Maestro</option>
+                            <option value="dj">DJ de Milonga</option>
+                            <option value="taxi dancer">Taxi Dancer</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Foto local del artista</label>
+                        <input type="file" id="nuevo-foto-file" accept="image/*" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                        <p id="label-foto-talento" class="text-[9px] text-stone-500 mt-1 hidden">Deja vacío para mantener la foto actual.</p>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Reseña o Biografía</label>
+                        <textarea id="nuevo-bio" rows="3" required class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500"></textarea>
+                    </div>
+                    <div class="flex gap-2">
+                        <button type="submit" id="btn-submit-talento" class="flex-1 bg-stone-800 hover:bg-stone-700 text-amber-400 border border-amber-500/20 font-bold py-2 rounded-lg text-xs uppercase tracking-wider">Añadir al Elenco</button>
+                        <button type="button" id="btn-cancelar-talento" class="hidden bg-stone-950 border border-stone-800 text-stone-500 hover:text-stone-300 font-bold py-2 px-4 rounded-lg text-xs uppercase tracking-wider">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="bg-stone-900 border border-stone-800 p-6 rounded-xl shadow-xl">
+                <h3 id="titulo-form-registro" class="text-md font-bold text-amber-500 mb-4 uppercase tracking-wider"><i class="fas fa-user-plus mr-2"></i>Registro Manual</h3>
+                <form id="form-registro-manual" class="space-y-3">
+                    <input type="hidden" id="edit-registro-id">
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Nombre Completo</label>
+                        <input type="text" id="reg-nombre" required class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Email</label>
+                            <input type="email" id="reg-email" required class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Teléfono</label>
+                            <input type="tel" id="reg-telefono" required class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Paquete Seleccionado</label>
+                        <select id="reg-paquete" required class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                            <!-- Dinámico -->
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Método de Pago</label>
+                        <select id="reg-metodo" required class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                            <option value="efectivo">Efectivo / Transferencia</option>
+                            <option value="credito">Tarjeta de Crédito</option>
+                            <option value="debito">Tarjeta Débito</option>
+                        </select>
+                    </div>
+                    <div id="campos-tarjeta-manual" class="hidden space-y-3 pt-2 border-t border-stone-800">
+                        <div>
+                            <label class="block text-[9px] font-bold text-stone-500 uppercase">Titular de la Tarjeta</label>
+                            <input type="text" id="reg-titular" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-[9px] font-bold text-stone-500 uppercase">Número de Tarjeta</label>
+                            <input type="text" id="reg-numero" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-[9px] font-bold text-stone-500 uppercase">Vencimiento</label>
+                                <input type="text" id="reg-exp" placeholder="MM/AA" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-[9px] font-bold text-stone-500 uppercase">CVV</label>
+                                <input type="password" id="reg-cvv" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-stone-400 uppercase">Referencia / Notas</label>
+                        <textarea id="reg-referencia" rows="2" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500" placeholder="Ej: Pago recibido en oficina"></textarea>
+                    </div>
+                    <div class="flex gap-2">
+                        <button type="submit" id="btn-submit-registro" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-xs uppercase tracking-wider">Registrar Comprador</button>
+                        <button type="button" id="btn-cancelar-registro" class="hidden bg-stone-950 border border-stone-800 text-stone-500 hover:text-stone-300 font-bold py-2 px-4 rounded-lg text-xs uppercase tracking-wider">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="xl:col-span-5 space-y-6">
+            <div class="bg-stone-900 border border-stone-800 rounded-xl p-6 shadow-xl">
+                <h3 class="text-lg font-bold text-stone-100 mb-4 uppercase tracking-wider">Registros Recibidos</h3>
+                <div class="overflow-x-auto rounded-lg border border-stone-800 max-h-60 overflow-y-auto custom-scrollbar">
+                    <table class="w-full text-left text-xs min-w-[600px]">
+                        <thead class="bg-stone-950 text-stone-400 uppercase border-b border-stone-800 sticky top-0">
+                            <tr>
+                                <th class="p-3">Participante</th>
+                                <th class="p-3">Paquete</th>
+                                <th class="p-3">Pago</th>
+                                <th class="p-3">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-inscritos" class="divide-y divide-stone-850"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-stone-900 border border-stone-800 rounded-xl p-6 shadow-xl">
+                <h3 class="text-lg font-bold text-stone-100 mb-4 uppercase tracking-wider">Elenco Publicado</h3>
+                <div id="lista-elenco-eliminar" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    </div>
+            </div>
+        </div>
+
+        <div class="xl:col-span-4">
+            <div class="bg-stone-900 border border-stone-800 rounded-xl p-6 shadow-xl">
+                <div class="flex items-center justify-between mb-4 gap-3">
+                    <h3 class="text-lg font-bold text-stone-100 uppercase tracking-wider">Paquetes de Tango</h3>
+                    <button id="btn-crear-paquete" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-2 px-3 rounded-lg text-xs uppercase tracking-wider">
+                        <i class="fas fa-plus mr-1"></i> Nuevo paquete
+                    </button>
+                </div>
+                <p class="text-xs text-stone-400 mb-4">Aquí puedes editar nombre, precio, badge y marcar qué incluye cada paquete. Lo no incluido aparece tachado en la landing.</p>
+                <div id="lista-paquetes-admin" class="space-y-4"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

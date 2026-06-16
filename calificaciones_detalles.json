@@ -1,0 +1,22 @@
+[
+  {
+    "id": "calif-1780972944179",
+    "fecha": "2026-06-09T02:42:24.179Z",
+    "talentoId": "zapato-1780972915435",
+    "talentoNombre": "zapato",
+    "talentoRol": "profesor",
+    "voto": 5,
+    "usuarioNombre": "Stiven Jimenez",
+    "usuarioTelefono": "3177137379"
+  },
+  {
+    "id": "calif-1780974534119",
+    "fecha": "2026-06-08T22:08:54",
+    "talentoId": "zapato-1780972915435",
+    "talentoNombre": "zapato",
+    "talentoRol": "profesor",
+    "voto": 5,
+    "usuarioNombre": "Stiven Jimenez",
+    "usuarioTelefono": "3177137379"
+  }
+]
