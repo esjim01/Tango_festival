@@ -1,0 +1,231 @@
+{
+  "configuracion": {
+    "banners": [
+      "/uploads/1781142480255-img2.webp",
+      "/uploads/1781143658974-img3.webp",
+      "/uploads/1781143666920-img6.webp",
+      "/uploads/1781143723960-img7.webp",
+      "/uploads/1781143741446-img9.webp",
+      "/uploads/1781143796349-img10.webp",
+      "/uploads/1781143849625-img1.webp"
+    ],
+    "hero_principal": "/uploads/1781143796338-logo_ctf_vd.webp",
+    "link_whatsapp": "https://wa.me/573000000000",
+    "footer_texto": "© 2026 Colombia Tango Festival. - Hecho con creatividad",
+    "footer_contacto": "Contacto: info@colombiatangofestival.com   / Celular: 30000000 "
+  },
+  "paquetes": [
+    {
+      "id": "package-1-1780628255508",
+      "nombre": "PAQUETE BASICO",
+      "precio": "750000",
+      "badge": "SEMANA COMPLETA",
+      "caracteristicas": [
+        {
+          "texto": "7 Milogas",
+          "incluido": true
+        },
+        {
+          "texto": "12 Talleres grupales",
+          "incluido": true
+        }
+      ],
+      "precio_pareja": "1400000"
+    },
+    {
+      "id": "package-2-1780628444571",
+      "nombre": "PAQUETE BASICO",
+      "precio": "600000",
+      "badge": "FIN DE SEMANA",
+      "caracteristicas": [
+        {
+          "texto": "7 Milogas",
+          "incluido": true
+        },
+        {
+          "texto": "12 Talleres grupales",
+          "incluido": true
+        }
+      ],
+      "precio_pareja": "1100000"
+    },
+    {
+      "id": "package-3-1780628737361",
+      "nombre": "PAQUETE ESTELAR",
+      "precio": "4350000",
+      "badge": "SEMANA COMPLETA",
+      "caracteristicas": [
+        {
+          "texto": "Hotel 7 noches - Habitación 1 persona",
+          "incluido": true
+        },
+        {
+          "texto": "7 Milogas",
+          "incluido": true
+        },
+        {
+          "texto": "2 Clases semiprivadas",
+          "incluido": true
+        },
+        {
+          "texto": "1 Par de zapatos (Mr Tango Shoes)",
+          "incluido": true
+        },
+        {
+          "texto": "3 Cenas de gala",
+          "incluido": true
+        },
+        {
+          "texto": "2 Atracciones turisticas",
+          "incluido": true
+        },
+        {
+          "texto": "12 Talleres grupales",
+          "incluido": true
+        },
+        {
+          "texto": "Acceso a Taxi Dancers",
+          "incluido": true
+        }
+      ],
+      "precio_pareja": "8000000"
+    },
+    {
+      "id": "package-4-1780629210955",
+      "nombre": "PAQUETE STANDAR",
+      "precio": "3000000",
+      "badge": "FIN DE SEMANA",
+      "caracteristicas": [
+        {
+          "texto": "Hotel 3 noches - Habitación 1 persona",
+          "incluido": true
+        },
+        {
+          "texto": "3 Milogas",
+          "incluido": true
+        },
+        {
+          "texto": "2 Clases semiprivadas",
+          "incluido": false
+        },
+        {
+          "texto": "1 Par de zapatos (Mr Tango Shoes)",
+          "incluido": true
+        },
+        {
+          "texto": "1 Cenas de gala",
+          "incluido": true
+        },
+        {
+          "texto": "2 Atracciones turisticas",
+          "incluido": false
+        },
+        {
+          "texto": "12 Talleres grupales",
+          "incluido": true
+        },
+        {
+          "texto": "Acceso a Taxi Dancers",
+          "incluido": true
+        }
+      ],
+      "precio_pareja": "5500000"
+    }
+  ],
+  "talento": [
+    {
+      "id": "mayra-alejandra-nieto-1781139866280",
+      "nombre": "Mayra Alejandra Nieto",
+      "rol": "dj",
+      "biografia": "Mayra Alejandra Nieto es bailarina, maestra profesional de tango y musicalizadora de la ciudad de Manizales, con más de 20 años de trayectoria artística y pedagógica. Su experiencia se ha desarrollado tanto a nivel nacional como internacional, participando en festivales, campeonatos y certámenes en países como Argentina, Alemania, Francia, España, Ecuador y México.\n\nSu formación ha estado enfocada principalmente en Buenos Aires, Argentina, donde ha estudiado con reconocidos maestros y referentes mundiales del tango. Además de su destacada carrera como intérprete, ha dedicado gran parte de su trayectoria a la enseñanza, promoviendo el desarrollo técnico, artístico y personal de sus estudiantes.\n\nHa sido directora de la Fundación Artística Latin Tango Club y de Bailarte Estudio de Danza en Manizales, así como organizadora de importantes eventos y festivales de tango. Asimismo, se ha desempeñado como musicalizadora en el Milongueando Tango Festival de Cartagena y Cali, en el Colombia Tango Festival y en diversas milongas y eventos en diferentes ciudades del país, contribuyendo a la difusión y fortalecimiento de la cultura tanguera.\n\nSe caracteriza por su profesionalismo, creatividad, sensibilidad artística y profundo compromiso con la enseñanza, promoción y preservación del tango como expresión cultural y patrimonio vivo.",
+      "foto": "/uploads/1781139866290-maira-nieto.jpeg",
+      "calificaciones": [],
+      "promedio": 0
+    },
+    {
+      "id": "merly-herrera-1781140199248",
+      "nombre": "Merly Herrera",
+      "rol": "dj",
+      "biografia": "Buen día, soy Merly Herrera Tango DJ. Casi todos nos conocemos.\n\nA lo largo de mi vida he tenido la oportunidad de bailar diferentes ritmos y desde hace aproximadamente 10 años comencé a formarme como bailarina de tango. \n\nTambién soy organizadora de milongas, milonguera y Tango DJ destacada en varias milongas de Medellín y una de las DJ oficiales en las milongas principales de la ciudad y he sido Tango DJ en milongas y festivales de otras ciudades de Colombia, como Manizales, Bogotá y Cali.\n\nMe alegra poder hacer parte de esta experiencia y espero compartamos y disfrutemos mucho este festival.\n¡Y bienvenidos a mi ciudad!",
+      "foto": "/uploads/1781140199256-merly-herrera-jpg.jpg",
+      "calificaciones": [],
+      "promedio": 0
+    },
+    {
+      "id": "mauricio-valencia-1781140536982",
+      "nombre": "Mauricio Valencia",
+      "rol": "dj",
+      "biografia": "Cordial saludo, mi nombre es Mauricio Valencia. Musicalizador 2011-2016 en el Centro cultural La Matraca de la ciudad de Cali, Colombia.\nActualmente DJ y organizador de La Milonga de Mauricio.\nEs un gusto, para mí , volver a ser parte del festival.\nUn fuerte abrazo.",
+      "foto": "/uploads/1781140536993-mauricio-valencia-jpg.jpg",
+      "calificaciones": [],
+      "promedio": 0
+    },
+    {
+      "id": "vladimir-shifrin-1781140823517",
+      "nombre": "Vladimir Shifrin",
+      "rol": "dj",
+      "biografia": "Hola a todos, soy Vladimir, DJ de tango de vinilo de Nueva York, USA. Aquí está mi foto a continuación y una breve biografía: Empecé a ser DJ-tango en 2004 y toqué regularmente hasta 2012 como DJ digital. Recientemente, regresé con un renovado enfoque en el tango de la edad de oro tocado exclusivamente en vinilo, y he sido DJ de vinilos en varios eventos de tango en Nueva York y festivales de todo el mundo. Estoy emocionado de llevar esta experiencia de sonido única a más comunidades de tango.",
+      "foto": "/uploads/1781140823526-vladimir-jpg.jpg",
+      "calificaciones": [],
+      "promedio": 0
+    },
+    {
+      "id": "leidy-berrio-la-flaca-1781141342697",
+      "nombre": "Leidy Berrio \"La Flaca\"",
+      "rol": "dj",
+      "biografia": "Hola a todos, mi nombre es Leidy Berrío, también conocida como 'La Flaca'. Soy música profesional. Me he estado formando como bailarina de tango y milonguera durante 13 años y, últimamente, también he estado estudiando danzas folclóricas argentinas desde hace casi 2 años. He sido DJ de tango durante 10 años, con un estudio profundo y constante de la estructura y el estilo de las orquestas típicas. ¡Espero con ansias compartir este increíble encuentro con todos ustedes! 😊",
+      "foto": "/uploads/1781141342710-leidy-berrio-jpg.jpg",
+      "calificaciones": [],
+      "promedio": 0
+    },
+    {
+      "id": "yuri-pritzer-1781141558415",
+      "nombre": "Yuri Pritzer",
+      "rol": "dj",
+      "biografia": "Disculpen, muchachos, no me había presentado. Aquí voy: soy Yury Pritzker. He estado bailando y estudiando tango por todo el mundo durante 16 años. Durante los últimos nueve, he enseñado tango junto a mi esposa, Svetlana, y he sido DJ en milongas por todo Chicago, Florida y en festivales tanto en los Estados Unidos como en el extranjero.",
+      "foto": "/uploads/1781141558429-yuri-jpg.jpg",
+      "calificaciones": [],
+      "promedio": 0
+    },
+    {
+      "id": "mauricio-galarzo-1781142066394",
+      "nombre": "Mauricio Galarzo",
+      "rol": "dj",
+      "biografia": "Con una trayectoria como maestro y bailarín certificado de la escuela Argentina de  tango de más de 20 años.\nMusicalizador de una de las primeras milongas de la ciudad de Medellín ( La Mas Pulenta) musicalizador de algunas milongas en Estados Unidos y Festivales internacionales.",
+      "foto": "/uploads/1781142066403-mauriciogalarzo-jpg.jpg",
+      "calificaciones": [],
+      "promedio": 0
+    },
+    {
+      "id": "ana-y-jorge-1781144164229",
+      "nombre": "Ana y Jorge",
+      "rol": "profesor",
+      "biografia": "Instructores experimentados",
+      "foto": "/uploads/1781144164241-ayj.png",
+      "calificaciones": [],
+      "promedio": 0
+    }
+  ],
+  "inscripciones": [
+    {
+      "id_registro": "reg-1781531059835",
+      "fecha": "2026-06-15T08:44:19",
+      "nombre_completo": "PRUEBA",
+      "email": "PRUEBA@PRUEBA.COM",
+      "telefono": "310000000",
+      "paquete": {
+        "id": "package-1-1780628255508",
+        "nombre": "PAQUETE BASICO",
+        "precio": "750000"
+      },
+      "pago": {
+        "metodo": "efectivo",
+        "titular": "N/A",
+        "numero_enmascarado": "N/A",
+        "expiracion": "N/A",
+        "ultimos4": "",
+        "referencia": "PAGO"
+      }
+    }
+  ]
+}

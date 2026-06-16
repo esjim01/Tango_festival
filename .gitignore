@@ -1,7 +1,4 @@
 node_modules
 .env
-uploads/*
-!uploads/default-profile.jpg
-data.json
 users.json
 sessions.json
