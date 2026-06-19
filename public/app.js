@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarContenidoCompleto();
     configurarModalInscripcion();
     iniciarCuentaRegresiva();
+    configurarMenuMobile();
 });
 
 // ... rest of code ...
@@ -53,7 +54,8 @@ function normalizarRol(rol) {
 }
 
 function tarjetaTalentoHtml(persona) {
-    const rolMostrado = normalizarRol(persona.rol) === 'profesor' ? 'Instructor' : persona.rol;
+    const rolNormalizado = normalizarRol(persona.rol);
+    const rolMostrado = ['profesor', 'instructor', 'maestro'].includes(rolNormalizado) ? 'Maestro' : persona.rol;
     return `
         <div class="bg-black/40 border border-gold/20 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between group hover:border-gold/50 transition-all duration-500 backdrop-blur-sm">
             <div class="h-48 w-full overflow-hidden bg-stone-950/30 relative p-4">
@@ -103,8 +105,18 @@ function obtenerIcono(texto) {
     return 'fa-check';
 }
 
+function esNumerico(valor) {
+    if (valor === null || valor === undefined || valor === '') return false;
+    const limpio = String(valor).replace(/[\s\.\,\$]/g, '');
+    return !isNaN(Number(limpio)) && limpio !== '';
+}
+
 function formatearPrecio(valor) {
-    return new Intl.NumberFormat('de-DE').format(valor);
+    if (!esNumerico(valor)) {
+        return valor;
+    }
+    const numero = Number(String(valor).replace(/[\s\.\,\$]/g, ''));
+    return new Intl.NumberFormat('de-DE').format(numero);
 }
 
 async function cargarContenidoCompleto() {
@@ -121,6 +133,30 @@ async function cargarContenidoCompleto() {
                 tarjeta.className = "relative border-2 border-gold/40 rounded-[2rem] p-8 flex flex-col items-center bg-black/40 backdrop-blur-md shadow-2xl hover:border-gold transition-all duration-500";
                 const badgeHtml = pkg.badge ? `<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#700101] text-white font-bold text-[10px] px-6 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg border border-red-500/30">${pkg.badge}</div>` : '';
                 const featuresHtml = pkg.caracteristicas.map(c => `<li class="flex items-start space-x-4 ${c.incluido ? '' : 'opacity-30 grayscale'}"><div class="w-5 h-5 mt-0.5 flex items-center justify-center shrink-0"><i class="fas ${obtenerIcono(c.texto)} text-gold text-sm"></i></div><span class="text-[11px] uppercase tracking-wider text-stone-200">${c.texto}</span></li>`).join('');
+                
+                let individualPrecioHtml = '';
+                if (esNumerico(pkg.precio)) {
+                    individualPrecioHtml = `$ ${formatearPrecio(pkg.precio)} <span class="text-[10px]">COP</span>`;
+                } else {
+                    individualPrecioHtml = `<span class="text-base sm:text-lg font-bold">${pkg.precio}</span>`;
+                }
+
+                let parejaPrecioHtml = '';
+                if (pkg.precio_pareja) {
+                    if (esNumerico(pkg.precio_pareja)) {
+                        parejaPrecioHtml = `$ ${formatearPrecio(pkg.precio_pareja)} <span class="text-[10px]">COP</span>`;
+                    } else {
+                        parejaPrecioHtml = `<span class="text-base sm:text-lg font-bold">${pkg.precio_pareja}</span>`;
+                    }
+                } else {
+                    if (esNumerico(pkg.precio)) {
+                        const calculado = Number(String(pkg.precio).replace(/[\s\.\,\$]/g, '')) * 1.8;
+                        parejaPrecioHtml = `$ ${formatearPrecio(calculado)} <span class="text-[10px]">COP</span>`;
+                    } else {
+                        parejaPrecioHtml = `<span class="text-base sm:text-lg font-bold">${pkg.precio}</span>`;
+                    }
+                }
+
                 tarjeta.innerHTML = `
                     ${badgeHtml}
                     <div class="w-full text-center mb-8">
@@ -133,13 +169,13 @@ async function cargarContenidoCompleto() {
                         <div class="pricing-gold py-4 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-0 group relative overflow-hidden">
                             <div class="relative z-10">
                                 <p class="text-[9px] font-bold uppercase tracking-widest text-black/60">Individual</p>
-                                <p class="text-xl sm:text-2xl font-black text-black tracking-tighter">$ ${formatearPrecio(pkg.precio)} <span class="text-[10px]">COP</span></p>
+                                <p class="text-xl sm:text-2xl font-black text-black tracking-tighter">${individualPrecioHtml}</p>
                             </div>
                         </div>
                         <div class="pricing-red py-3 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-0 opacity-90 hover:opacity-100 transition-opacity">
                             <div>
                                 <p class="text-[9px] font-bold uppercase tracking-widest text-white/60">Pareja</p>
-                                <p class="text-lg sm:text-xl font-bold text-white tracking-tighter">$ ${formatearPrecio(pkg.precio_pareja || (Number(pkg.precio) * 1.8))} <span class="text-[10px]">COP</span></p>
+                                <p class="text-lg sm:text-xl font-bold text-white tracking-tighter">${parejaPrecioHtml}</p>
                             </div>
                             <i class="fas fa-users text-white/40 text-sm hidden sm:block"></i>
                         </div>
@@ -179,6 +215,7 @@ async function cargarContenidoCompleto() {
         }
 
         if (datos.configuracion) {
+            window.configuracionGlobal = datos.configuracion;
             const btnWhatsapp = document.getElementById('btn-whatsapp');
             const footerTexto = document.getElementById('footer-texto');
             const footerContacto = document.getElementById('footer-contacto');
@@ -187,11 +224,11 @@ async function cargarContenidoCompleto() {
             if (footerContacto) footerContacto.innerText = datos.configuracion.footer_contacto || '';
         }
 
-        const cInstructores = document.getElementById('contenedor-instructores');
+        const cMaestros = document.getElementById('contenedor-maestros');
         const cTaxiDancers = document.getElementById('contenedor-taxi-dancers');
         const cDjs = document.getElementById('contenedor-djs');
         if (datos.talento) {
-            renderizarGrupoTalento(cInstructores, datos.talento.filter(p => ['profesor', 'instructor', 'maestro'].includes(normalizarRol(p.rol))));
+            renderizarGrupoTalento(cMaestros, datos.talento.filter(p => ['profesor', 'instructor', 'maestro'].includes(normalizarRol(p.rol))));
             renderizarGrupoTalento(cTaxiDancers, datos.talento.filter(p => ['taxi dancer', 'taxidancer'].includes(normalizarRol(p.rol))));
             renderizarGrupoTalento(cDjs, datos.talento.filter(p => ['dj', 'djs'].includes(normalizarRol(p.rol))));
             asignarEventosEstrellas();
@@ -218,13 +255,36 @@ window.abrirModal = function(id, nombre, precio) {
     if (id) {
         contenedorSeleccion.classList.add('hidden');
         selector.innerHTML = `<option value="${id}">${nombre}</option>`;
-        document.getElementById('modal-titulo-paquete').innerText = `${nombre} - $${formatearPrecio(precio)} COP`;
+        const tituloPrecio = esNumerico(precio) ? `$${formatearPrecio(precio)} COP` : precio;
+        document.getElementById('modal-titulo-paquete').innerText = `${nombre} - ${tituloPrecio}`;
     } else {
         contenedorSeleccion.classList.remove('hidden');
         document.getElementById('modal-titulo-paquete').innerText = "Inscripción General";
         if (window.paquetesDisponibles) {
-            selector.innerHTML = window.paquetesDisponibles.map(p => `<option value="${p.id}">${p.nombre} - $${formatearPrecio(p.precio)} COP</option>`).join('');
+            selector.innerHTML = window.paquetesDisponibles.map(p => {
+                const optPrecio = esNumerico(p.precio) ? `$${formatearPrecio(p.precio)} COP` : p.precio;
+                return `<option value="${p.id}">${p.nombre} - ${optPrecio}</option>`;
+            }).join('');
         }
+    }
+    
+    // Actualizar dinámicamente selector de métodos de pago
+    const selectorMetodo = document.getElementById('modal-metodo-pago');
+    if (selectorMetodo) {
+        selectorMetodo.innerHTML = '';
+        selectorMetodo.innerHTML += '<option value="credito">Tarjeta de crédito</option>';
+        selectorMetodo.innerHTML += '<option value="debito">Tarjeta débito</option>';
+        
+        if (window.configuracionGlobal && window.configuracionGlobal.pago_nequi_habilitado) {
+            selectorMetodo.innerHTML += '<option value="nequi">Nequi</option>';
+        }
+        if (window.configuracionGlobal && window.configuracionGlobal.pago_transferencia_habilitado) {
+            selectorMetodo.innerHTML += '<option value="transferencia">Transferencia Bancaria</option>';
+        }
+        
+        // Resetear al primer valor y disparar cambio
+        selectorMetodo.value = 'credito';
+        selectorMetodo.dispatchEvent(new Event('change'));
     }
     
     const modal = document.getElementById('modal-inscripcion');
@@ -248,6 +308,57 @@ function configurarModalInscripcion() {
 
     modal.addEventListener('click', (e) => { if (e.target === modal) cerrarModal(); });
 
+    // Escuchar el cambio de método de pago
+    const selectorMetodo = document.getElementById('modal-metodo-pago');
+    const contenedorTarjeta = document.getElementById('contenedor-datos-tarjeta');
+    const contenedorOffline = document.getElementById('contenedor-datos-offline');
+    const offlineTitulo = document.getElementById('offline-titulo');
+    const offlineInstrucciones = document.getElementById('offline-instrucciones');
+    
+    const inputsTarjeta = [
+        document.getElementById('modal-tarjeta-titular'),
+        document.getElementById('modal-tarjeta-numero'),
+        document.getElementById('modal-tarjeta-exp'),
+        document.getElementById('modal-tarjeta-cvv')
+    ];
+    const refPago = document.getElementById('modal-referencia');
+
+    if (selectorMetodo && contenedorTarjeta && contenedorOffline) {
+        selectorMetodo.addEventListener('change', () => {
+            const metodo = selectorMetodo.value;
+            
+            if (metodo === 'credito' || metodo === 'debito') {
+                contenedorTarjeta.classList.remove('hidden');
+                inputsTarjeta.forEach(i => { if (i) i.required = true; });
+                contenedorOffline.classList.add('hidden');
+                if (refPago) {
+                    refPago.required = false;
+                    refPago.placeholder = "Ej: Transacción de Nequi o transferencia bancaria";
+                }
+            } else if (metodo === 'nequi') {
+                contenedorTarjeta.classList.add('hidden');
+                inputsTarjeta.forEach(i => { if (i) i.required = false; });
+                contenedorOffline.classList.remove('hidden');
+                if (offlineTitulo) offlineTitulo.innerText = "Instrucciones de Pago con Nequi";
+                if (offlineInstrucciones) offlineInstrucciones.innerText = window.configuracionGlobal?.pago_nequi_datos || "Celular Nequi no configurado.";
+                if (refPago) {
+                    refPago.required = true;
+                    refPago.placeholder = "Ingresa el comprobante o número de referencia del envío Nequi";
+                }
+            } else if (metodo === 'transferencia') {
+                contenedorTarjeta.classList.add('hidden');
+                inputsTarjeta.forEach(i => { if (i) i.required = false; });
+                contenedorOffline.classList.remove('hidden');
+                if (offlineTitulo) offlineTitulo.innerText = "Instrucciones de Transferencia Bancaria";
+                if (offlineInstrucciones) offlineInstrucciones.innerText = window.configuracionGlobal?.pago_transferencia_datos || "Datos de cuenta bancaria no configurados.";
+                if (refPago) {
+                    refPago.required = true;
+                    refPago.placeholder = "Ingresa el comprobante o número de referencia de la transferencia bancaria";
+                }
+            }
+        });
+    }
+
     formModal.addEventListener('submit', async (e) => {
         e.preventDefault();
         const selector = document.getElementById('modal-paquete-id');
@@ -263,11 +374,11 @@ function configurarModalInscripcion() {
             telefono: document.getElementById('modal-telefono').value,
             paquete_id: paqueteId,
             paquete_nombre: paqueteNombre.split('-')[0].trim(),
-            metodo_pago: document.getElementById('modal-metodo-pago').value,
-            tarjeta_titular: document.getElementById('modal-tarjeta-titular').value,
-            tarjeta_numero: document.getElementById('modal-tarjeta-numero').value,
-            tarjeta_expiracion: document.getElementById('modal-tarjeta-exp').value,
-            tarjeta_cvv: document.getElementById('modal-tarjeta-cvv').value,
+            metodo_pago: selectorMetodo.value,
+            tarjeta_titular: document.getElementById('modal-tarjeta-titular').value || 'N/A',
+            tarjeta_numero: document.getElementById('modal-tarjeta-numero').value || '',
+            tarjeta_expiracion: document.getElementById('modal-tarjeta-exp').value || 'N/A',
+            tarjeta_cvv: document.getElementById('modal-tarjeta-cvv').value || '',
             datos_pago_referencia: document.getElementById('modal-referencia').value
         };
 
@@ -347,3 +458,60 @@ document.getElementById('form-calificacion').addEventListener('submit', async (e
 document.getElementById('modal-calificacion').addEventListener('click', (e) => {
     if (e.target.id === 'modal-calificacion') cerrarModalCalificacion();
 });
+
+function configurarMenuMobile() {
+    const btnMenu = document.getElementById('menu-mobile-btn');
+    const menuMobile = document.getElementById('menu-mobile');
+    
+    if (btnMenu && menuMobile) {
+        // Alternar el menú al hacer clic en el botón de hamburguesa
+        btnMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const estaOculto = menuMobile.classList.contains('hidden');
+            if (estaOculto) {
+                menuMobile.classList.remove('hidden');
+                menuMobile.classList.add('flex');
+                btnMenu.innerHTML = '<i class="fas fa-times"></i>'; // Cambiar a cerrar
+            } else {
+                menuMobile.classList.remove('flex');
+                menuMobile.classList.add('hidden');
+                btnMenu.innerHTML = '<i class="fas fa-bars"></i>'; // Cambiar a hamburguesa
+            }
+        });
+
+        // Función auxiliar global para cerrar el menú móvil
+        window.cerrarMenuMobile = () => {
+            menuMobile.classList.remove('flex');
+            menuMobile.classList.add('hidden');
+            btnMenu.innerHTML = '<i class="fas fa-bars"></i>';
+        };
+
+        // Cerrar menú al hacer clic en cualquier enlace móvil
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                cerrarMenuMobile();
+            });
+        });
+
+        // Cerrar el menú si se hace clic en cualquier otra parte del documento
+        document.addEventListener('click', (e) => {
+            if (!menuMobile.contains(e.target) && e.target !== btnMenu && !btnMenu.contains(e.target)) {
+                cerrarMenuMobile();
+            }
+        });
+    }
+
+    // Cambiar la opacidad/fondo del Navbar al hacer scroll
+    const navbar = document.querySelector('nav');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black', 'shadow-2xl');
+                navbar.classList.remove('bg-black/85');
+            } else {
+                navbar.classList.add('bg-black/85');
+                navbar.classList.remove('bg-black', 'shadow-2xl');
+            }
+        });
+    }
+}

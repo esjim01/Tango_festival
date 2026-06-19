@@ -16,7 +16,11 @@ function normalizarData(db) {
             hero_principal: '',
             link_whatsapp: '',
             footer_texto: '',
-            footer_contacto: ''
+            footer_contacto: '',
+            pago_nequi_habilitado: true,
+            pago_nequi_datos: '',
+            pago_transferencia_habilitado: true,
+            pago_transferencia_datos: ''
         },
         paquetes: [],
         talento: [],

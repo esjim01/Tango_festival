@@ -185,7 +185,17 @@ router.get('/descargar/calificaciones', async (req, res) => {
 
 // RUTA: Modificar configuración de la página
 router.put('/configuracion', async (req, res) => {
-    const { link_whatsapp, banners, footer_texto, footer_contacto, hero_principal } = req.body;
+    const { 
+        link_whatsapp, 
+        banners, 
+        footer_texto, 
+        footer_contacto, 
+        hero_principal,
+        pago_nequi_habilitado,
+        pago_nequi_datos,
+        pago_transferencia_habilitado,
+        pago_transferencia_datos
+    } = req.body;
 
     try {
         const db = await leerBaseDatos();
@@ -194,6 +204,11 @@ router.put('/configuracion', async (req, res) => {
         if (footer_texto !== undefined) db.configuracion.footer_texto = String(footer_texto);
         if (footer_contacto !== undefined) db.configuracion.footer_contacto = String(footer_contacto);
         if (hero_principal !== undefined) db.configuracion.hero_principal = String(hero_principal);
+
+        if (pago_nequi_habilitado !== undefined) db.configuracion.pago_nequi_habilitado = !!pago_nequi_habilitado;
+        if (pago_nequi_datos !== undefined) db.configuracion.pago_nequi_datos = String(pago_nequi_datos);
+        if (pago_transferencia_habilitado !== undefined) db.configuracion.pago_transferencia_habilitado = !!pago_transferencia_habilitado;
+        if (pago_transferencia_datos !== undefined) db.configuracion.pago_transferencia_datos = String(pago_transferencia_datos);
 
         await guardarBaseDatos(db);
         res.json({ mensaje: "Configuración actualizada con éxito." });

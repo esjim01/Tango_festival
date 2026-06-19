@@ -18,5 +18,15 @@
     "voto": 5,
     "usuarioNombre": "Stiven Jimenez",
     "usuarioTelefono": "3177137379"
+  },
+  {
+    "id": "calif-1781623473415",
+    "fecha": "2026-06-16T10:24:33",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 4,
+    "usuarioNombre": "perucho",
+    "usuarioTelefono": "3127275293"
   }
 ]

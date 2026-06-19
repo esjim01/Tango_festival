@@ -60,9 +60,55 @@
         .custom-scrollbar::-webkit-scrollbar { width: 5px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #1c1917; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        .scroll-mt-24 {
+            scroll-margin-top: 6rem;
+        }
     </style>
-</head>
 <body class="bg-black text-stone-100 font-sans selection:bg-gold selection:text-black">
+
+    <!-- Barra de Navegación Premium -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/85 backdrop-blur-md border-b border-gold/10 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo / Nombre del Festival -->
+            <a href="#" class="flex items-center gap-2 text-white hover:text-gold transition-colors">
+                <i class="fas fa-music text-gold text-lg"></i>
+                <span class="font-serif font-bold tracking-widest text-xs sm:text-sm uppercase">Colombia Tango Festival</span>
+            </a>
+
+            <!-- Menú de Escritorio -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#paquetes" class="text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold">Paquetes</a>
+                <a href="#maestros" class="text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold">Maestros</a>
+                <a href="#taxi-dancers" class="text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold">Taxi Dancers</a>
+                <a href="#djs" class="text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold">DJs</a>
+                <a href="#modal-inscripcion" onclick="abrirModalManual()" class="bg-gold-gradient text-black font-black px-6 py-2 rounded-full uppercase tracking-widest text-[9px] hover:brightness-110 transition-all">
+                    Inscríbete
+                </a>
+            </div>
+
+            <!-- Botón del Menú Hamburguesa (Móvil) -->
+            <button id="menu-mobile-btn" class="md:hidden text-stone-300 hover:text-gold transition-colors text-xl p-2 focus:outline-none" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="menu-mobile" class="hidden flex-col bg-stone-950/95 backdrop-blur-lg border-b border-gold/10 md:hidden transition-all duration-300">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="#paquetes" class="mobile-link text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold py-2 border-b border-stone-900">Paquetes</a>
+                <a href="#maestros" class="mobile-link text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold py-2 border-b border-stone-900">Maestros</a>
+                <a href="#taxi-dancers" class="mobile-link text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold py-2 border-b border-stone-900">Taxi Dancers</a>
+                <a href="#djs" class="mobile-link text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold py-2 border-b border-stone-900">DJs</a>
+                <a href="#modal-inscripcion" onclick="abrirModalManual(); cerrarMenuMobile()" class="mobile-link bg-gold-gradient text-black font-black px-6 py-3 rounded-full text-center uppercase tracking-widest text-[9px] hover:brightness-110 transition-all mt-2">
+                    Inscríbete
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <header class="relative min-h-screen w-full overflow-hidden bg-black flex items-center justify-center">
         <!-- Fondo con efecto de desenfoque y duplicación -->
@@ -133,7 +179,7 @@
 
     <main class="max-w-6xl mx-auto px-4 py-16">
         
-        <section id="paquetes" class="mb-24">
+        <section id="paquetes" class="mb-24 scroll-mt-24">
             <div class="package-title-border mb-12">
                 <h2 class="text-3xl md:text-5xl font-serif font-bold text-center text-gold uppercase tracking-[0.2em]">Paquetes del Festival</h2>
             </div>
@@ -179,22 +225,22 @@
             <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/40 to-transparent"></div>
         </section>
 
-        <section class="mb-20">
+        <section id="elenco" class="mb-20 scroll-mt-24">
             <h2 class="text-3xl font-serif font-bold text-center text-amber-500 mb-2 uppercase tracking-wider">Elenco Oficial</h2>
             <p class="text-center text-stone-400 mb-10 text-sm">Conoce y califica a nuestros Profesores, DJs y Taxi Dancers</p>
 
             <div class="space-y-10">
-                <div>
-                    <h3 class="text-xl font-serif font-bold text-stone-100 mb-4 uppercase tracking-wider">Instructores</h3>
-                    <div id="contenedor-instructores" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                <div id="maestros" class="scroll-mt-24">
+                    <h3 class="text-xl font-serif font-bold text-stone-100 mb-4 uppercase tracking-wider">Maestros</h3>
+                    <div id="contenedor-maestros" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
                 </div>
 
-                <div>
+                <div id="taxi-dancers" class="scroll-mt-24">
                     <h3 class="text-xl font-serif font-bold text-stone-100 mb-4 uppercase tracking-wider">Taxi Dancers</h3>
                     <div id="contenedor-taxi-dancers" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
                 </div>
 
-                <div>
+                <div id="djs" class="scroll-mt-24">
                     <h3 class="text-xl font-serif font-bold text-stone-100 mb-4 uppercase tracking-wider">DJs</h3>
                     <div id="contenedor-djs" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
                 </div>
@@ -242,39 +288,52 @@
                 </div>
 
                 <div class="pt-4 border-t border-stone-800">
-                    <span class="text-stone-400 text-xs font-semibold block mb-3"><i class="fas fa-lock text-emerald-600 mr-1"></i> Pago con Tarjeta de Crédito (Simulación Segura)</span>
+                    <span class="text-stone-400 text-xs font-semibold block mb-3"><i class="fas fa-lock text-emerald-600 mr-1"></i> Formulario de Pago Seguro</span>
                     <div class="mb-3">
                         <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Método de Pago</label>
                         <select id="modal-metodo-pago" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
                             <option value="credito">Tarjeta de crédito</option>
                             <option value="debito">Tarjeta débito</option>
+                            <option value="nequi">Nequi</option>
+                            <option value="transferencia">Transferencia Bancaria</option>
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Titular de la Tarjeta</label>
-                        <input type="text" id="modal-tarjeta-titular" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Número de Tarjeta</label>
-                        <div class="relative">
-                            <input type="text" id="modal-tarjeta-numero" placeholder="•••• •••• •••• ••••" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
-                            <i class="fab fa-cc-visa absolute right-3 top-3 text-stone-600"></i>
+
+                    <!-- Contenedor para pagos con tarjeta -->
+                    <div id="contenedor-datos-tarjeta" class="space-y-3">
+                        <div class="mb-3">
+                            <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Titular de la Tarjeta</label>
+                            <input type="text" id="modal-tarjeta-titular" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Número de Tarjeta</label>
+                            <div class="relative">
+                                <input type="text" id="modal-tarjeta-numero" placeholder="•••• •••• •••• ••••" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                                <i class="fab fa-cc-visa absolute right-3 top-3 text-stone-600"></i>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Fecha Vencimiento</label>
+                                <input type="text" id="modal-tarjeta-exp" placeholder="MM/AA" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Código CVC / CVV</label>
+                                <input type="password" id="modal-tarjeta-cvv" placeholder="•••" maxLength="4" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                            </div>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Fecha Vencimiento</label>
-                            <input type="text" id="modal-tarjeta-exp" placeholder="MM/AA" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
-                        </div>
-                        <div>
-                            <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Código CVC / CVV</label>
-                            <input type="password" id="modal-tarjeta-cvv" placeholder="•••" maxLength="4" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
-                        </div>
+
+                    <!-- Contenedor para pagos offline (Nequi, Transferencia) -->
+                    <div id="contenedor-datos-offline" class="hidden bg-stone-950/60 border border-amber-500/30 rounded-lg p-4 text-xs text-stone-300 space-y-2 mb-3">
+                        <p class="font-bold text-amber-500 uppercase tracking-wider text-[10px]" id="offline-titulo"></p>
+                        <div id="offline-instrucciones" class="whitespace-pre-line leading-relaxed"></div>
                     </div>
+
                     <div class="mt-3">
-                        <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Referencia de Pago</label>
-                        <textarea id="modal-referencia" rows="2" class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500" placeholder="Ej: Banco, transacción, observaciones"></textarea>
+                        <label class="block text-[9px] font-bold text-stone-500 uppercase mb-1">Referencia / Comprobante de Pago</label>
+                        <textarea id="modal-referencia" rows="2" class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500" placeholder="Ej: Transacción de Nequi o transferencia bancaria"></textarea>
                     </div>
                 </div>
 
@@ -317,6 +376,12 @@
         <p id="footer-texto" class="mb-2"></p>
         <p id="footer-contacto" class="text-xs text-stone-500"></p>
     </footer>
+
+    <!-- Botón Flotante para Calificar Elenco (Maestros y DJs) -->
+    <a id="btn-calificar-flotante" href="#elenco" class="fixed bottom-6 left-6 bg-amber-500 hover:bg-amber-400 text-stone-950 px-4 py-3 rounded-full flex items-center gap-2 shadow-2xl z-50 text-[10px] font-black uppercase tracking-widest transition-all hover:scale-105">
+        <i class="fas fa-star text-sm"></i>
+        <span>Calificar Elenco</span>
+    </a>
 
     <a id="btn-whatsapp" href="#" target="_blank" class="fixed bottom-6 right-6 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl z-50"><i class="fab fa-whatsapp"></i></a>
 

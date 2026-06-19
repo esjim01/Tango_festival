@@ -235,6 +235,11 @@ async function cargarDatosPanelMaestro() {
         document.getElementById('admin-whatsapp').value = datos.configuracion.link_whatsapp || '';
         document.getElementById('admin-footer-texto').value = datos.configuracion.footer_texto || '';
         document.getElementById('admin-footer-contacto').value = datos.configuracion.footer_contacto || '';
+        
+        document.getElementById('admin-pago-nequi-habilitado').checked = !!datos.configuracion.pago_nequi_habilitado;
+        document.getElementById('admin-pago-nequi-datos').value = datos.configuracion.pago_nequi_datos || '';
+        document.getElementById('admin-pago-transferencia-habilitado').checked = !!datos.configuracion.pago_transferencia_habilitado;
+        document.getElementById('admin-pago-transferencia-datos').value = datos.configuracion.pago_transferencia_datos || '';
 
         paquetesLocales = Array.isArray(datos.paquetes) ? datos.paquetes : [];
         renderPaquetesAdmin();
@@ -256,7 +261,7 @@ async function cargarDatosPanelMaestro() {
                         <img src="${art.foto}" class="w-10 h-10 object-cover rounded-full border border-amber-500/30">
                         <div>
                             <h4 class="text-xs font-bold text-stone-200">${escaparHtml(art.nombre)}</h4>
-                            <span class="text-[9px] text-amber-500 uppercase font-semibold">${art.rol === 'profesor' ? 'Instructor' : escaparHtml(art.rol)}</span>
+                            <span class="text-[9px] text-amber-500 uppercase font-semibold">${['profesor', 'instructor', 'maestro'].includes(String(art.rol).toLowerCase()) ? 'Maestro' : escaparHtml(art.rol)}</span>
                         </div>
                     </div>
                     <div class="flex space-x-1">
@@ -372,7 +377,11 @@ function configurarEventosAdmin() {
                 const datos = {
                     link_whatsapp: document.getElementById('admin-whatsapp').value,
                     footer_texto: document.getElementById('admin-footer-texto').value,
-                    footer_contacto: document.getElementById('admin-footer-contacto').value
+                    footer_contacto: document.getElementById('admin-footer-contacto').value,
+                    pago_nequi_habilitado: document.getElementById('admin-pago-nequi-habilitado').checked,
+                    pago_nequi_datos: document.getElementById('admin-pago-nequi-datos').value,
+                    pago_transferencia_habilitado: document.getElementById('admin-pago-transferencia-habilitado').checked,
+                    pago_transferencia_datos: document.getElementById('admin-pago-transferencia-datos').value
                 };
 
                 await fetchAdmin(`${API_ADMIN}/configuracion`, {

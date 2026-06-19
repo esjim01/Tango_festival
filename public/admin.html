@@ -63,6 +63,23 @@
                         <label class="block text-[10px] font-bold text-stone-400 uppercase">WhatsApp Link</label>
                         <input type="url" id="admin-whatsapp" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
                     </div>
+                    
+                    <div class="pt-3 border-t border-stone-800 space-y-3">
+                        <span class="text-amber-500 text-[10px] font-bold uppercase tracking-wider block"><i class="fas fa-wallet mr-1"></i> Configuración de Pagos Alternativos</span>
+                        <div>
+                            <label class="flex items-center gap-2 text-[10px] font-bold text-stone-400 uppercase cursor-pointer">
+                                <input type="checkbox" id="admin-pago-nequi-habilitado"> Habilitar Nequi
+                            </label>
+                            <input type="text" id="admin-pago-nequi-datos" placeholder="Ej: Celular: 3103812546 - Nombre: Jorge" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500 mt-1">
+                        </div>
+                        <div>
+                            <label class="flex items-center gap-2 text-[10px] font-bold text-stone-400 uppercase cursor-pointer">
+                                <input type="checkbox" id="admin-pago-transferencia-habilitado"> Habilitar Transferencia Bancaria
+                            </label>
+                            <textarea id="admin-pago-transferencia-datos" rows="3" placeholder="Ej: Bancolombia Cuenta Ahorros Nro. 123-456789 - Jorge Giraldo" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500 mt-1"></textarea>
+                        </div>
+                    </div>
+
                     <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-2 rounded-lg text-xs uppercase tracking-wider">Guardar Cambios Visuales</button>
                 </form>
                 <div class="mt-4 text-[11px] text-stone-500" id="estado-config"></div>
@@ -79,7 +96,7 @@
                     <div>
                         <label class="block text-[10px] font-bold text-stone-400 uppercase">Rol / Categoría</label>
                         <select id="nuevo-rol" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
-                            <option value="instructor">Instructor / Maestro</option>
+                            <option value="instructor">Maestro</option>
                             <option value="dj">DJ de Milonga</option>
                             <option value="taxi dancer">Taxi Dancer</option>
                         </select>
