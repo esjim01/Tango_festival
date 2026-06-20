@@ -234,7 +234,8 @@
                 
                     <!-- Contenedor de la Imagen -->
                     <div class="flex justify-center w-full" data-astro-cid-wejsgauk="">
-                        <img src="uploads/JorgeNel.webp" 
+                        <img id="organizador-imagen"
+                             src="uploads/JorgeNel.webp" 
                              alt="Jorge Nel Giraldo" 
                              width="500" 
                              height="600" 
@@ -246,16 +247,14 @@
                 
                     <!-- Contenido de Texto -->
                     <div class="flex flex-col space-y-4" data-astro-cid-wejsgauk="">
-                        <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wide uppercase" data-astro-cid-wejsgauk="">
+                        <h2 id="organizador-nombre" class="text-3xl md:text-4xl font-bold text-white tracking-wide uppercase" data-astro-cid-wejsgauk="">
                             JORGE NEL GIRALDO
                         </h2>
-                        <!-- Usamos text-gold ya que tu banner maneja esa paleta, si no compila puedes usar text-amber-500 -->
-                        <p class="text-sm font-semibold text-gold tracking-widest uppercase" data-astro-cid-wejsgauk="">
+                        <p id="organizador-rol" class="text-sm font-semibold text-gold tracking-widest uppercase" data-astro-cid-wejsgauk="">
                             ORGANIZADOR
                         </p>
                     
-                        <!-- Biografía en tono claro y legible sobre fondo negro -->
-                        <div class="text-zinc-300 space-y-4 leading-relaxed text-base font-light" data-astro-cid-wejsgauk="">
+                        <div id="organizador-descripcion" class="text-zinc-300 space-y-4 leading-relaxed text-base font-light whitespace-pre-wrap" data-astro-cid-wejsgauk="">
                             <p data-astro-cid-wejsgauk="">He dedicado 40 años al tango. Mis padres fueron excelentes bailadores de la Melodía Argentina. Mi padre era fabricante de zapatos, y por eso tengo el amor por el tango y por la zapatería muy adentro.</p>
                             <p data-astro-cid-wejsgauk="">Los mejores recuerdos de mi tierna infancia siempre están en mi mente. De niño pequeño, acostado en una cunita al lado del taller de mi papá, veía a mi padre hacer zapatos mientras escuchaba los mejores tangos de esa época. La música del tango, así como el sonido del martillo pegando las suelas de los zapatos, son recuerdos maravillosos.</p>
                             <p data-astro-cid-wejsgauk="">En un punto de mi carrera como bailarín de tango, me enfermé y me di cuenta, aún más profundamente, del hecho de que mi cuerpo era la herramienta para mi trabajo.</p>
@@ -365,7 +364,7 @@
                         </div>
 
                         <!-- Nombre -->
-                        <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide uppercase" data-astro-cid-holckp65="">
+                        <h3 id="hotel-nombre" class="text-xl md:text-2xl font-bold text-white tracking-wide uppercase" data-astro-cid-holckp65="">
                             HOTEL DORADO DE LA 70
                         </h3>
 
@@ -375,7 +374,7 @@
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
-                            <span>Carrera 70 # 44B - 66, Laureles - Estadio, 050034 Medellín, Colombia</span>
+                            <span id="hotel-descripcion">Carrera 70 # 44B - 66, Laureles - Estadio, 050034 Medellín, Colombia</span>
                         </p>
 
                         <!-- Mapa de Google Embebido -->
@@ -385,7 +384,8 @@
 
                         <!-- Botón de Enlace -->
                         <div class="pt-2">
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Carrera+70+44B-66+Laureles+Estadio+Medellin+Colombia" 
+                            <a id="hotel-enlace"
+                               href="https://www.google.com/maps/search/?api=1&amp;query=Carrera+70+44B-66+Laureles+Estadio+Medellin+Colombia" 
                                target="_blank" 
                                rel="noopener noreferrer" 
                                class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 border border-gold text-gold font-semibold text-sm rounded-xl hover:bg-gold hover:text-black transition-all duration-300 shadow-md uppercase tracking-wider" 
@@ -447,12 +447,12 @@
         <!-- Cuerpo del Texto -->
         <div class="max-h-[60vh] overflow-y-auto pr-2 space-y-4 text-zinc-300 text-sm md:text-base leading-relaxed scrollbar-thin" data-astro-cid-orsllehx="">
             
-            <p class="text-base italic text-zinc-400 border-b border-white/5 pb-2" data-astro-cid-orsllehx="">
+            <p id="politica-intro" class="text-base italic text-zinc-400 border-b border-white/5 pb-2" data-astro-cid-orsllehx="">
                 Por favor, tómate un momento para entender nuestra política de cancelación.
             </p> 
 
             <!-- Lista de Puntos -->
-            <ul class="flex flex-col gap-3 list-none" data-astro-cid-orsllehx=""> 
+            <ul id="politica-reglas" class="flex flex-col gap-3 list-none" data-astro-cid-orsllehx=""> 
                 <li class="p-4 bg-white/5 rounded-xl border-l-4 border-gold" data-astro-cid-orsllehx=""> 
                     <strong class="text-white font-medium">Cancelas dentro de una semana después de tu pago</strong> → reembolso del 90%. 
                 </li>
@@ -468,14 +468,10 @@
             </ul>
 
             <!-- Explicación -->
-            <p class="text-xs text-zinc-400 bg-white/[0.02] p-4 rounded-xl border border-white/5" data-astro-cid-orsllehx=""> 
-                Esta política existe porque debemos asegurar hoteles, pagar comidas, reservar espacios para eventos, programar tours y hacer depósitos con anticipación. En Colombia, la mayoría de las reservas requieren el pago completo o un depósito mínimo del 50%. 
-            </p> 
+            <p id="politica-explicacion" class="text-xs text-zinc-400 bg-white/[0.02] p-4 rounded-xl border border-white/5 whitespace-pre-wrap" data-astro-cid-orsllehx="">Esta política existe porque debemos asegurar hoteles, pagar comidas, reservar espacios para eventos, programar tours y hacer depósitos con anticipación. En Colombia, la mayoría de las reservas requieren el pago completo o un depósito mínimo del 50%.</p> 
             
             <!-- Advertencia Crítica -->
-            <div class="p-4 bg-red-950/20 border-l-4 border-red-600 rounded-xl text-zinc-300" data-astro-cid-orsllehx=""> 
-                <strong class="text-red-500 font-semibold">Bajo ninguna circunstancia</strong> —enfermedad, accidente, emergencia, situación familiar— se emitirán reembolsos más allá de los términos establecidos anteriormente. 
-            </div> 
+            <div id="politica-advertencia" class="p-4 bg-red-950/20 border-l-4 border-red-600 rounded-xl text-zinc-300 whitespace-pre-wrap" data-astro-cid-orsllehx=""><strong class="text-red-500 font-semibold">Bajo ninguna circunstancia</strong> —enfermedad, accidente, emergencia, situación familiar— se emitirán reembolsos más allá de los términos establecidos anteriormente.</div> 
         </div>
 
         <!-- Botón de Cierre Inferior -->

@@ -194,7 +194,19 @@ router.put('/configuracion', async (req, res) => {
         pago_nequi_habilitado,
         pago_nequi_datos,
         pago_transferencia_habilitado,
-        pago_transferencia_datos
+        pago_transferencia_datos,
+        organizador_nombre,
+        organizador_rol,
+        organizador_descripcion,
+        organizador_imagen,
+        hotel_nombre,
+        hotel_descripcion,
+        hotel_enlace,
+        hotel_imagen,
+        politica_intro,
+        politica_reglas,
+        politica_explicacion,
+        politica_advertencia
     } = req.body;
 
     try {
@@ -210,9 +222,25 @@ router.put('/configuracion', async (req, res) => {
         if (pago_transferencia_habilitado !== undefined) db.configuracion.pago_transferencia_habilitado = !!pago_transferencia_habilitado;
         if (pago_transferencia_datos !== undefined) db.configuracion.pago_transferencia_datos = String(pago_transferencia_datos);
 
+        if (organizador_nombre !== undefined) db.configuracion.organizador_nombre = String(organizador_nombre);
+        if (organizador_rol !== undefined) db.configuracion.organizador_rol = String(organizador_rol);
+        if (organizador_descripcion !== undefined) db.configuracion.organizador_descripcion = String(organizador_descripcion);
+        if (organizador_imagen !== undefined) db.configuracion.organizador_imagen = String(organizador_imagen);
+
+        if (hotel_nombre !== undefined) db.configuracion.hotel_nombre = String(hotel_nombre);
+        if (hotel_descripcion !== undefined) db.configuracion.hotel_descripcion = String(hotel_descripcion);
+        if (hotel_enlace !== undefined) db.configuracion.hotel_enlace = String(hotel_enlace);
+        if (hotel_imagen !== undefined) db.configuracion.hotel_imagen = String(hotel_imagen);
+
+        if (politica_intro !== undefined) db.configuracion.politica_intro = String(politica_intro);
+        if (Array.isArray(politica_reglas)) db.configuracion.politica_reglas = politica_reglas;
+        if (politica_explicacion !== undefined) db.configuracion.politica_explicacion = String(politica_explicacion);
+        if (politica_advertencia !== undefined) db.configuracion.politica_advertencia = String(politica_advertencia);
+
         await guardarBaseDatos(db);
         res.json({ mensaje: "Configuración actualizada con éxito." });
     } catch (error) {
+        console.error("Error al actualizar configuración:", error);
         res.status(500).json({ error: "Error al actualizar la configuración." });
     }
 });

@@ -293,6 +293,42 @@ async function cargarContenidoCompleto() {
             if (btnWhatsapp) btnWhatsapp.href = datos.configuracion.link_whatsapp || '#';
             if (footerTexto) footerTexto.innerText = datos.configuracion.footer_texto || '';
             if (footerContacto) footerContacto.innerText = datos.configuracion.footer_contacto || '';
+
+            // Organizador
+            const orgNombre = document.getElementById('organizador-nombre');
+            const orgRol = document.getElementById('organizador-rol');
+            const orgDesc = document.getElementById('organizador-descripcion');
+            const orgImg = document.getElementById('organizador-imagen');
+            if (orgNombre && datos.configuracion.organizador_nombre) orgNombre.innerText = datos.configuracion.organizador_nombre;
+            if (orgRol && datos.configuracion.organizador_rol) orgRol.innerText = datos.configuracion.organizador_rol;
+            if (orgDesc && datos.configuracion.organizador_descripcion) orgDesc.innerText = datos.configuracion.organizador_descripcion;
+            if (orgImg && datos.configuracion.organizador_imagen) orgImg.src = datos.configuracion.organizador_imagen;
+
+            // Hotel
+            const hotelNombre = document.getElementById('hotel-nombre');
+            const hotelDesc = document.getElementById('hotel-descripcion');
+            const hotelEnlace = document.getElementById('hotel-enlace');
+            if (hotelNombre && datos.configuracion.hotel_nombre) hotelNombre.innerText = datos.configuracion.hotel_nombre;
+            if (hotelDesc && datos.configuracion.hotel_descripcion) hotelDesc.innerText = datos.configuracion.hotel_descripcion;
+            if (hotelEnlace && datos.configuracion.hotel_enlace) hotelEnlace.href = datos.configuracion.hotel_enlace;
+
+            // Política de Cancelación
+            const polIntro = document.getElementById('politica-intro');
+            const polExpl = document.getElementById('politica-explicacion');
+            const polAdv = document.getElementById('politica-advertencia');
+            const polReglas = document.getElementById('politica-reglas');
+            
+            if (polIntro && datos.configuracion.politica_intro) polIntro.innerText = datos.configuracion.politica_intro;
+            if (polExpl && datos.configuracion.politica_explicacion) polExpl.innerText = datos.configuracion.politica_explicacion;
+            if (polAdv && datos.configuracion.politica_advertencia) polAdv.innerHTML = `<strong class="text-red-500 font-semibold">Bajo ninguna circunstancia</strong> ${datos.configuracion.politica_advertencia.replace('Bajo ninguna circunstancia', '')}`;
+            
+            if (polReglas && Array.isArray(datos.configuracion.politica_reglas)) {
+                polReglas.innerHTML = datos.configuracion.politica_reglas.map(r => `
+                    <li class="p-4 bg-white/5 rounded-xl border-l-4 border-gold"> 
+                        <strong class="text-white font-medium">${r.condicion}</strong> → ${r.reembolso}. 
+                    </li>
+                `).join('');
+            }
         }
 
         const cMaestros = document.getElementById('contenedor-maestros');

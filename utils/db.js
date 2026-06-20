@@ -20,7 +20,24 @@ function normalizarData(db) {
             pago_nequi_habilitado: true,
             pago_nequi_datos: '',
             pago_transferencia_habilitado: true,
-            pago_transferencia_datos: ''
+            pago_transferencia_datos: '',
+            organizador_nombre: 'Jorge Nel Giraldo',
+            organizador_rol: 'Organizador y Fundador',
+            organizador_descripcion: 'Jorge Nel Giraldo es el fundador y organizador del Colombia Tango Festival. Es un reconocido maestro de tango, bailarín y empresario con una trayectoria de más de 50 años en el mundo de este género. Además de su labor como organizador de festivales, es el creador de Mr. Tango Shoes, una reconocida marca internacional de zapatos especializados para bailar tango.',
+            organizador_imagen: '/images/JorgeNel.webp',
+            hotel_nombre: 'HOTEL DORADO DE LA 70',
+            hotel_descripcion: 'Carrera 70 # 44B - 66, Laureles - Estadio, 050034 Medellín, Colombia',
+            hotel_enlace: 'https://maps.google.com',
+            hotel_imagen: '',
+            politica_intro: 'Por favor, tómate un momento para entender nuestra política de cancelación.',
+            politica_reglas: [
+                { condicion: 'Cancelas dentro de una semana después de tu pago', reembolso: 'reembolso del 90%' },
+                { condicion: 'Cancelas después de una semana y hasta dos meses después de tu pago', reembolso: 'reembolso del 70%' },
+                { condicion: 'Cancelas después de dos meses y hasta un mes antes del evento', reembolso: 'reembolso del 50%' },
+                { condicion: 'Cancelas dentro del mes antes del evento', reembolso: 'sin reembolso' }
+            ],
+            politica_explicacion: 'Esta política existe porque debemos asegurar hoteles, pagar comidas, reservar espacios para eventos, programar tours y hacer depósitos con anticipación. En Colombia, la mayoría de las reservas requieren el pago completo o un depósito mínimo del 50%.',
+            politica_advertencia: 'Bajo ninguna circunstancia —enfermedad, accidente, emergencia, situación familiar— se emitirán reembolsos más allá de los términos establecidos anteriormente.'
         },
         paquetes: [],
         talento: [],

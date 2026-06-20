@@ -241,6 +241,25 @@ async function cargarDatosPanelMaestro() {
         document.getElementById('admin-pago-transferencia-habilitado').checked = !!datos.configuracion.pago_transferencia_habilitado;
         document.getElementById('admin-pago-transferencia-datos').value = datos.configuracion.pago_transferencia_datos || '';
 
+        // Organizador
+        document.getElementById('admin-organizador-nombre').value = datos.configuracion.organizador_nombre || '';
+        document.getElementById('admin-organizador-rol').value = datos.configuracion.organizador_rol || '';
+        document.getElementById('admin-organizador-descripcion').value = datos.configuracion.organizador_descripcion || '';
+        document.getElementById('admin-organizador-imagen').value = datos.configuracion.organizador_imagen || '';
+
+        // Hotel
+        document.getElementById('admin-hotel-nombre').value = datos.configuracion.hotel_nombre || '';
+        document.getElementById('admin-hotel-descripcion').value = datos.configuracion.hotel_descripcion || '';
+        document.getElementById('admin-hotel-enlace').value = datos.configuracion.hotel_enlace || '';
+
+        // Política de Cancelación
+        document.getElementById('admin-politica-intro').value = datos.configuracion.politica_intro || '';
+        document.getElementById('admin-politica-explicacion').value = datos.configuracion.politica_explicacion || '';
+        document.getElementById('admin-politica-advertencia').value = datos.configuracion.politica_advertencia || '';
+        
+        window.politicaReglasActuales = Array.isArray(datos.configuracion.politica_reglas) ? datos.configuracion.politica_reglas : [];
+        renderPoliticaReglas();
+
         paquetesLocales = Array.isArray(datos.paquetes) ? datos.paquetes : [];
         renderPaquetesAdmin();
 
@@ -360,6 +379,53 @@ function limpiarFormRegistro() {
     document.getElementById('btn-cancelar-registro').classList.add('hidden');
 }
 
+// Lógica para Reglas Dinámicas de Política de Cancelación
+window.renderPoliticaReglas = function() {
+    const container = document.getElementById('admin-politica-reglas-container');
+    if (!container) return;
+
+    container.innerHTML = window.politicaReglasActuales.map((regla, idx) => `
+        <div class="regla-row flex gap-2 items-start bg-stone-900 border border-stone-800 p-2 rounded">
+            <div class="flex-1 space-y-2">
+                <input type="text" class="regla-condicion w-full bg-stone-950 border border-stone-700 rounded p-1 text-[10px] text-stone-300 focus:outline-none focus:border-amber-500" value="${escaparHtml(regla.condicion)}" placeholder="Condición (ej: Cancelas dentro de 1 mes)">
+                <input type="text" class="regla-reembolso w-full bg-stone-950 border border-stone-700 rounded p-1 text-[10px] text-stone-300 focus:outline-none focus:border-amber-500" value="${escaparHtml(regla.reembolso)}" placeholder="Reembolso (ej: reembolso del 50%)">
+            </div>
+            <button type="button" onclick="eliminarReglaPolitica(${idx})" class="text-red-500 hover:text-red-400 p-2 text-xs" title="Eliminar regla"><i class="fas fa-trash"></i></button>
+        </div>
+    `).join('');
+};
+
+window.agregarReglaPolitica = function() {
+    if (!window.politicaReglasActuales) window.politicaReglasActuales = [];
+    
+    // Antes de añadir, guardamos el estado actual de los inputs para no perder lo que han escrito
+    const container = document.getElementById('admin-politica-reglas-container');
+    if (container) {
+        const rows = container.querySelectorAll('.regla-row');
+        window.politicaReglasActuales = Array.from(rows).map(row => ({
+            condicion: row.querySelector('.regla-condicion').value,
+            reembolso: row.querySelector('.regla-reembolso').value
+        }));
+    }
+
+    window.politicaReglasActuales.push({ condicion: '', reembolso: '' });
+    renderPoliticaReglas();
+};
+
+window.eliminarReglaPolitica = function(idx) {
+    const container = document.getElementById('admin-politica-reglas-container');
+    if (container) {
+        const rows = container.querySelectorAll('.regla-row');
+        window.politicaReglasActuales = Array.from(rows).map(row => ({
+            condicion: row.querySelector('.regla-condicion').value,
+            reembolso: row.querySelector('.regla-reembolso').value
+        }));
+    }
+
+    window.politicaReglasActuales.splice(idx, 1);
+    renderPoliticaReglas();
+};
+
 function configurarEventosAdmin() {
     const formConfig = document.getElementById('form-config-avanzada');
     if (formConfig) {
@@ -381,8 +447,32 @@ function configurarEventosAdmin() {
                     pago_nequi_habilitado: document.getElementById('admin-pago-nequi-habilitado').checked,
                     pago_nequi_datos: document.getElementById('admin-pago-nequi-datos').value,
                     pago_transferencia_habilitado: document.getElementById('admin-pago-transferencia-habilitado').checked,
-                    pago_transferencia_datos: document.getElementById('admin-pago-transferencia-datos').value
+                    pago_transferencia_datos: document.getElementById('admin-pago-transferencia-datos').value,
+                    
+                    organizador_nombre: document.getElementById('admin-organizador-nombre').value,
+                    organizador_rol: document.getElementById('admin-organizador-rol').value,
+                    organizador_descripcion: document.getElementById('admin-organizador-descripcion').value,
+                    organizador_imagen: document.getElementById('admin-organizador-imagen').value,
+                    
+                    hotel_nombre: document.getElementById('admin-hotel-nombre').value,
+                    hotel_descripcion: document.getElementById('admin-hotel-descripcion').value,
+                    hotel_enlace: document.getElementById('admin-hotel-enlace').value,
+                    
+                    politica_intro: document.getElementById('admin-politica-intro').value,
+                    politica_explicacion: document.getElementById('admin-politica-explicacion').value,
+                    politica_advertencia: document.getElementById('admin-politica-advertencia').value,
+                    politica_reglas: window.politicaReglasActuales || []
                 };
+
+                // Actualizar las reglas desde los inputs actuales antes de enviar
+                const reglasContainer = document.getElementById('admin-politica-reglas-container');
+                if (reglasContainer) {
+                    const rows = reglasContainer.querySelectorAll('.regla-row');
+                    datos.politica_reglas = Array.from(rows).map(row => ({
+                        condicion: row.querySelector('.regla-condicion').value,
+                        reembolso: row.querySelector('.regla-reembolso').value
+                    }));
+                }
 
                 await fetchAdmin(`${API_ADMIN}/configuracion`, {
                     method: 'PUT',

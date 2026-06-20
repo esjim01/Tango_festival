@@ -80,7 +80,71 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-2 rounded-lg text-xs uppercase tracking-wider">Guardar Cambios Visuales</button>
+                    <!-- SECCIÓN ORGANIZADOR -->
+                    <div class="pt-3 border-t border-stone-800 space-y-3">
+                        <span class="text-amber-500 text-[10px] font-bold uppercase tracking-wider block"><i class="fas fa-user-tie mr-1"></i> Sección Organizador</span>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Nombre</label>
+                            <input type="text" id="admin-organizador-nombre" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Rol</label>
+                            <input type="text" id="admin-organizador-rol" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Descripción</label>
+                            <textarea id="admin-organizador-descripcion" rows="3" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">URL Imagen Organizador</label>
+                            <input type="text" id="admin-organizador-imagen" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500" placeholder="/images/JorgeNel.webp">
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN HOTEL -->
+                    <div class="pt-3 border-t border-stone-800 space-y-3">
+                        <span class="text-amber-500 text-[10px] font-bold uppercase tracking-wider block"><i class="fas fa-hotel mr-1"></i> Sección Hotel & Sede</span>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Nombre del Hotel</label>
+                            <input type="text" id="admin-hotel-nombre" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Descripción / Dirección</label>
+                            <textarea id="admin-hotel-descripcion" rows="2" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">URL Enlace de Google Maps / Reserva</label>
+                            <input type="text" id="admin-hotel-enlace" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+
+                    <!-- POLÍTICA DE CANCELACIÓN -->
+                    <div class="pt-3 border-t border-stone-800 space-y-3">
+                        <span class="text-amber-500 text-[10px] font-bold uppercase tracking-wider block"><i class="fas fa-file-contract mr-1"></i> Política de Cancelación</span>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Introducción</label>
+                            <textarea id="admin-politica-intro" rows="2" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500"></textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Reglas de Reembolso</label>
+                            <div id="admin-politica-reglas-container" class="space-y-2 mt-2">
+                                <!-- Las reglas se inyectan acá -->
+                            </div>
+                            <button type="button" onclick="agregarReglaPolitica()" class="mt-2 w-full border border-stone-700 hover:border-amber-500 text-stone-400 hover:text-amber-500 text-[10px] py-1 rounded transition-colors"><i class="fas fa-plus"></i> Añadir Regla</button>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Explicación</label>
+                            <textarea id="admin-politica-explicacion" rows="3" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold text-stone-400 uppercase">Advertencia (Rojo)</label>
+                            <textarea id="admin-politica-advertencia" rows="2" class="w-full bg-stone-950 border border-stone-800 rounded-lg p-2 text-xs focus:outline-none focus:border-amber-500"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-2 rounded-lg text-xs uppercase tracking-wider">Guardar Configuración General</button>
                 </form>
                 <div class="mt-4 text-[11px] text-stone-500" id="estado-config"></div>
             </div>
