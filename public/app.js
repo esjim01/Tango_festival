@@ -331,6 +331,9 @@ const modal = document.getElementById('policy-modal');
         }
     });
 
+
+     
+
 function configurarModalInscripcion() {
     const modal = document.getElementById('modal-inscripcion');
     const formModal = document.getElementById('form-modal-pago');
