@@ -24,7 +24,7 @@ function normalizarData(db) {
             organizador_nombre: 'Jorge Nel Giraldo',
             organizador_rol: 'Organizador y Fundador',
             organizador_descripcion: 'Jorge Nel Giraldo es el fundador y organizador del Colombia Tango Festival. Es un reconocido maestro de tango, bailarín y empresario con una trayectoria de más de 50 años en el mundo de este género. Además de su labor como organizador de festivales, es el creador de Mr. Tango Shoes, una reconocida marca internacional de zapatos especializados para bailar tango.',
-            organizador_imagen: '/images/JorgeNel.webp',
+            organizador_imagen: '/uploads/JorgeNel.webp',
             hotel_nombre: 'HOTEL DORADO DE LA 70',
             hotel_descripcion: 'Carrera 70 # 44B - 66, Laureles - Estadio, 050034 Medellín, Colombia',
             hotel_enlace: 'https://maps.google.com',
