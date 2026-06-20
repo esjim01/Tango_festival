@@ -52,19 +52,6 @@
           "incluido": true
         }
       ]
-    },
-    {
-      "id": "package-3-1781657659565",
-      "nombre": "PACKAGE #3",
-      "precio": "0",
-      "precio_pareja": "",
-      "badge": "",
-      "caracteristicas": [
-        {
-          "texto": "Nuevo beneficio",
-          "incluido": true
-        }
-      ]
     }
   ],
   "talento": [
