@@ -302,6 +302,35 @@ window.abrirModalManual = function() {
     window.abrirModal(null);
 }
 
+const modal = document.getElementById('policy-modal');
+    const openBtn = document.getElementById('open-policy-btn');
+    const closeBtn = document.getElementById('close-policy-btn');
+    const closeBtnBottom = document.getElementById('close-policy-btn-bottom');
+
+    // Función para abrir el modal
+    const openModal = () => {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+    };
+
+    // Función para cerrar el modal
+    const closeModal = () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = ''; // Restaura scroll
+    };
+
+    // Listeners
+    openBtn?.addEventListener('click', openModal);
+    closeBtn?.addEventListener('click', closeModal);
+    closeBtnBottom?.addEventListener('click', closeModal);
+
+    // Cerrar también si hacen clic fuera de la caja interna (en el fondo oscuro)
+    modal?.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
 function configurarModalInscripcion() {
     const modal = document.getElementById('modal-inscripcion');
     const formModal = document.getElementById('form-modal-pago');
