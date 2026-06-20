@@ -312,8 +312,8 @@
 
                         <!-- Ventana de visualización (Clip) -->
                         <div class="overflow-hidden rounded-2xl relative h-[250px] sm:h-[400px]" id="hotelCarousel" data-astro-cid-holckp65="">
-                            <!-- Track que mueve JavaScript (Nota: se mantiene el estilo en línea para que tu JS funcione) -->
-                            <div class="flex transition-transform duration-1000 ease-in-out h-full w-full" data-astro-cid-holckp65="" style="transform: translateX(-500%);">
+                            <!-- Track que mueve JavaScript -->
+                            <div id="hotel-carousel-track" class="flex transition-transform duration-500 ease-in-out h-full w-full" data-astro-cid-holckp65="" style="transform: translateX(0%);">
 
                                 <!-- Slides -->
                                 <div class="carousel-slide min-w-full h-full flex-shrink-0" data-index="0" data-astro-cid-holckp65=""><img src="uploads/hotel (1).webp" alt="Hotel Dorado de la 70 - Vista 1" loading="eager" decoding="async" class="w-full h-full object-cover" data-astro-cid-holckp65=""></div>
@@ -399,9 +399,6 @@
                 </div>
             </div>
         </section>
-
-
-
         
 
         <section class="max-w-4xl mx-auto bg-stone-900/40 border border-stone-800 p-6 rounded-2xl shadow-2xl text-center">
@@ -415,6 +412,7 @@
 <!-- ========================================== -->
 <div class="mt-12 text-center" data-astro-cid-37fxchfa="">
     <button id="open-policy-btn" 
+            onclick="abrirModalPolitica()"
             class="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-zinc-400 hover:text-gold hover:border-gold font-medium text-sm rounded-xl transition-all duration-300 uppercase tracking-wider cursor-pointer"
             data-astro-cid-37fxchfa="">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="opacity-70"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
@@ -435,6 +433,7 @@
         
         <!-- Botón Cerrar (X) -->
         <button id="close-policy-btn" 
+                onclick="cerrarModalPolitica()"
                 class="absolute top-5 right-5 text-zinc-400 hover:text-white transition p-1 rounded-lg hover:bg-white/5 cursor-pointer"
                 aria-label="Cerrar modal">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -481,7 +480,7 @@
 
         <!-- Botón de Cierre Inferior -->
         <div class="mt-6 pt-4 border-t border-white/5 text-right" data-astro-cid-orsllehx="">
-            <button id="close-policy-btn-bottom" class="px-5 py-2 bg-zinc-800 text-white font-medium text-sm rounded-xl hover:bg-zinc-700 transition cursor-pointer">
+            <button id="close-policy-btn-bottom" onclick="cerrarModalPolitica()" class="px-5 py-2 bg-zinc-800 text-white font-medium text-sm rounded-xl hover:bg-zinc-700 transition cursor-pointer">
                 Entendido
             </button>
         </div>
@@ -620,6 +619,6 @@
 
     <a id="btn-whatsapp" href="#" target="_blank" class="fixed bottom-6 right-6 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl z-50"><i class="fab fa-whatsapp"></i></a>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
 </html>

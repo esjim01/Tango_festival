@@ -5,7 +5,78 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarModalInscripcion();
     iniciarCuentaRegresiva();
     configurarMenuMobile();
+    iniciarCarruselHotel();
 });
+
+// Lógica del Carrusel del Hotel
+function iniciarCarruselHotel() {
+    const track = document.getElementById('hotel-carousel-track');
+    if (!track) return;
+
+    const slides = Array.from(track.children);
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+    
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('active', 'bg-gold', 'w-4');
+                dot.classList.remove('w-2', 'bg-white/40');
+            } else {
+                dot.classList.remove('active', 'bg-gold', 'w-4');
+                dot.classList.add('w-2', 'bg-white/40');
+            }
+        });
+    }
+
+    function moveToNext() {
+        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+        updateCarousel();
+    }
+
+    function moveToPrev() {
+        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+        updateCarousel();
+    }
+
+    function resetAutoPlay() {
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = setInterval(moveToNext, 5000); // 5 seconds autoplay
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            moveToNext();
+            resetAutoPlay();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            moveToPrev();
+            resetAutoPlay();
+        });
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+            resetAutoPlay();
+        });
+    });
+
+    // Initialize
+    updateCarousel();
+    resetAutoPlay();
+}
 
 // ... rest of code ...
 
@@ -302,34 +373,33 @@ window.abrirModalManual = function() {
     window.abrirModal(null);
 }
 
-const modal = document.getElementById('policy-modal');
-    const openBtn = document.getElementById('open-policy-btn');
-    const closeBtn = document.getElementById('close-policy-btn');
-    const closeBtnBottom = document.getElementById('close-policy-btn-bottom');
-
-    // Función para abrir el modal
-    const openModal = () => {
+window.abrirModalPolitica = function() {
+    const modal = document.getElementById('policy-modal');
+    if (modal) {
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden'; // Evita scroll de fondo
-    };
+    }
+};
 
-    // Función para cerrar el modal
-    const closeModal = () => {
+window.cerrarModalPolitica = function() {
+    const modal = document.getElementById('policy-modal');
+    if (modal) {
         modal.classList.add('hidden');
         document.body.style.overflow = ''; // Restaura scroll
-    };
+    }
+};
 
-    // Listeners
-    openBtn?.addEventListener('click', openModal);
-    closeBtn?.addEventListener('click', closeModal);
-    closeBtnBottom?.addEventListener('click', closeModal);
-
-    // Cerrar también si hacen clic fuera de la caja interna (en el fondo oscuro)
-    modal?.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
+// Cerrar también si hacen clic fuera de la caja interna (en el fondo oscuro)
+document.addEventListener('DOMContentLoaded', () => {
+    const modalPolitica = document.getElementById('policy-modal');
+    if (modalPolitica) {
+        modalPolitica.addEventListener('click', (e) => {
+            if (e.target === modalPolitica) {
+                window.cerrarModalPolitica();
+            }
+        });
+    }
+});
 
 
      
