@@ -228,6 +228,57 @@ async function cargarContenidoCompleto() {
                     }
                 }
 
+                let individualEsBoton = !esNumerico(pkg.precio);
+                let individualHtml = '';
+                if (individualEsBoton) {
+                    individualHtml = `
+                        <a href="${datos.configuracion?.link_whatsapp || '#'}" target="_blank" class="pricing-gold py-4 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-0 group relative overflow-hidden hover:scale-105 active:scale-95 duration-300 transition-all cursor-pointer block w-full">
+                            <div class="relative z-10 w-full flex flex-row justify-between items-center px-2">
+                                <div>
+                                    <p class="text-[9px] font-bold uppercase tracking-widest text-black/60">Individual</p>
+                                    <p class="text-xl sm:text-2xl font-black text-black tracking-tighter flex items-center gap-2">${individualPrecioHtml}</p>
+                                </div>
+                                <i class="fab fa-whatsapp text-black/70 text-2xl"></i>
+                            </div>
+                        </a>
+                    `;
+                } else {
+                    individualHtml = `
+                        <div class="pricing-gold py-4 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-0 group relative overflow-hidden w-full">
+                            <div class="relative z-10 px-2">
+                                <p class="text-[9px] font-bold uppercase tracking-widest text-black/60">Individual</p>
+                                <p class="text-xl sm:text-2xl font-black text-black tracking-tighter">${individualPrecioHtml}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                let parejaEsBoton = pkg.precio_pareja ? !esNumerico(pkg.precio_pareja) : !esNumerico(pkg.precio);
+                let parejaHtml = '';
+                if (parejaEsBoton) {
+                    parejaHtml = `
+                        <a href="${datos.configuracion?.link_whatsapp || '#'}" target="_blank" class="pricing-red py-3 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-0 opacity-90 hover:opacity-100 hover:scale-105 active:scale-95 duration-300 transition-all cursor-pointer block w-full">
+                            <div class="w-full flex flex-row justify-between items-center px-2">
+                                <div>
+                                    <p class="text-[9px] font-bold uppercase tracking-widest text-white/60">Pareja</p>
+                                    <p class="text-lg sm:text-xl font-bold text-white tracking-tighter flex items-center gap-2">${parejaPrecioHtml}</p>
+                                </div>
+                                <i class="fab fa-whatsapp text-white/70 text-2xl"></i>
+                            </div>
+                        </a>
+                    `;
+                } else {
+                    parejaHtml = `
+                        <div class="pricing-red py-3 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-0 opacity-90 hover:opacity-100 transition-opacity w-full">
+                            <div class="px-2">
+                                <p class="text-[9px] font-bold uppercase tracking-widest text-white/60">Pareja</p>
+                                <p class="text-lg sm:text-xl font-bold text-white tracking-tighter">${parejaPrecioHtml}</p>
+                            </div>
+                            <i class="fas fa-users text-white/40 text-sm hidden sm:block"></i>
+                        </div>
+                    `;
+                }
+
                 tarjeta.innerHTML = `
                     ${badgeHtml}
                     <div class="w-full text-center mb-8">
@@ -237,19 +288,8 @@ async function cargarContenidoCompleto() {
                     <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-gold/50 to-transparent mb-8"></div>
                     <ul class="w-full space-y-6 mb-10 overflow-hidden">${featuresHtml}</ul>
                     <div class="w-full mt-auto space-y-4">
-                        <div class="pricing-gold py-4 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-0 group relative overflow-hidden">
-                            <div class="relative z-10">
-                                <p class="text-[9px] font-bold uppercase tracking-widest text-black/60">Individual</p>
-                                <p class="text-xl sm:text-2xl font-black text-black tracking-tighter">${individualPrecioHtml}</p>
-                            </div>
-                        </div>
-                        <div class="pricing-red py-3 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 sm:gap-0 opacity-90 hover:opacity-100 transition-opacity">
-                            <div>
-                                <p class="text-[9px] font-bold uppercase tracking-widest text-white/60">Pareja</p>
-                                <p class="text-lg sm:text-xl font-bold text-white tracking-tighter">${parejaPrecioHtml}</p>
-                            </div>
-                            <i class="fas fa-users text-white/40 text-sm hidden sm:block"></i>
-                        </div>
+                        ${individualHtml}
+                        ${parejaHtml}
                         <button onclick="abrirModal('${pkg.id}', '${pkg.nombre}', '${pkg.precio}')" class="w-full mt-4 bg-transparent border border-gold/50 hover:bg-gold hover:text-black text-gold font-bold py-3 rounded-xl transition-all uppercase tracking-[0.2em] text-[10px] cursor-pointer">Reservar ahora</button>
                     </div>`;
                 contenedorPaquetes.appendChild(tarjeta);

@@ -113,6 +113,15 @@ router.post('/calificaciones', async (req, res) => {
     }
 
     try {
+        const calificacionesDetalles = await leerCalificacionesDetalles();
+        const telefonoExiste = calificacionesDetalles.some(c => 
+            String(c.usuarioTelefono).trim() === String(telefono).trim()
+        );
+
+        if (telefonoExiste) {
+            return res.status(400).json({ error: "Este número de teléfono ya tiene un voto registrado." });
+        }
+
         const db = await leerBaseDatos();
         const persona = db.talento.find(t => t.id === talentoId);
 
@@ -125,7 +134,6 @@ router.post('/calificaciones', async (req, res) => {
         await guardarBaseDatos(db);
 
         // Guardar detalle en el archivo separado
-        const calificacionesDetalles = await leerCalificacionesDetalles();
         calificacionesDetalles.push({
             id: `calif-${Date.now()}`,
             fecha: obtenerFechaColombia(),

@@ -28,5 +28,2585 @@
     "voto": 4,
     "usuarioNombre": "perucho",
     "usuarioTelefono": "3127275293"
+  },
+  {
+    "id": "calif-1781967846997",
+    "fecha": "2026-06-20T10:04:06",
+    "talentoId": "ana-y-jorge-1781144164229",
+    "talentoNombre": "ANA ZORAIDA & JORGE PADILLA",
+    "talentoRol": "profesor",
+    "voto": 5,
+    "usuarioNombre": "Marlene Prieto ",
+    "usuarioTelefono": "3177462042"
+  },
+  {
+    "id": "calif-1781967977148",
+    "fecha": "2026-06-20T10:06:17",
+    "talentoId": "david-ospina-1781628349236",
+    "talentoNombre": "DAVID OSPINA ",
+    "talentoRol": "instructor",
+    "voto": 5,
+    "usuarioNombre": "Marlene Prieto ",
+    "usuarioTelefono": "3177462042"
+  },
+  {
+    "id": "calif-1781967992466",
+    "fecha": "2026-06-20T10:06:32",
+    "talentoId": "julian-catano-natalia-castano-1781630109577",
+    "talentoNombre": "JULIAN CATAñO & NATALIA  CASTAñO",
+    "talentoRol": "instructor",
+    "voto": 5,
+    "usuarioNombre": "Marlene Prieto ",
+    "usuarioTelefono": "3177462042"
+  },
+  {
+    "id": "calif-1781968009518",
+    "fecha": "2026-06-20T10:06:49",
+    "talentoId": "mayi-yepes-camilo-bernal-1781630613096",
+    "talentoNombre": "MAYI YEPES  &  CAMILO BERNAL ",
+    "talentoRol": "instructor",
+    "voto": 5,
+    "usuarioNombre": "Marlene Prieto ",
+    "usuarioTelefono": "3177462042"
+  },
+  {
+    "id": "calif-1781968032597",
+    "fecha": "2026-06-20T10:07:12",
+    "talentoId": "valentin-arias-diana-franco-1781631088373",
+    "talentoNombre": "VALENTIN ARIAS & DIANA FRANCO",
+    "talentoRol": "instructor",
+    "voto": 5,
+    "usuarioNombre": "Marlene Prieto ",
+    "usuarioTelefono": "3177462042"
+  },
+  {
+    "id": "calif-1781968050227",
+    "fecha": "2026-06-20T10:07:30",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Marlene Prieto ",
+    "usuarioTelefono": "3177462042"
+  },
+  {
+    "id": "calif-1781968065468",
+    "fecha": "2026-06-20T10:07:45",
+    "talentoId": "mauricio-valencia-1781140536982",
+    "talentoNombre": "Mauricio Valencia",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Marlene Prieto ",
+    "usuarioTelefono": "3177462042"
+  },
+  {
+    "id": "calif-1782060522195",
+    "fecha": "2026-06-21T11:48:42",
+    "talentoId": "mauricio-galarzo-1781142066394",
+    "talentoNombre": "Mauricio Galarzo",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sandra Zapata",
+    "usuarioTelefono": "3004402480"
+  },
+  {
+    "id": "calif-1782069616948",
+    "fecha": "2026-06-21T14:20:16",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Merly Herrera ",
+    "usuarioTelefono": "3233459396"
+  },
+  {
+    "id": "calif-1782070836110",
+    "fecha": "2026-06-21T14:40:36",
+    "talentoId": "mauricio-galarzo-1781142066394",
+    "talentoNombre": "Mauricio Galarzo",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Andrés Camilo Tapias Ocampo",
+    "usuarioTelefono": "3217804702"
+  },
+  {
+    "id": "calif-1782070864497",
+    "fecha": "2026-06-21T14:41:04",
+    "talentoId": "mauricio-galarzo-1781142066394",
+    "talentoNombre": "Mauricio Galarzo",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jorge Calderón ",
+    "usuarioTelefono": "3008707627"
+  },
+  {
+    "id": "calif-1782072011717",
+    "fecha": "2026-06-21T15:00:11",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Mayra Nieto",
+    "usuarioTelefono": "3192315994"
+  },
+  {
+    "id": "calif-1782072571892",
+    "fecha": "2026-06-21T15:09:31",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juan Pablo Henao ",
+    "usuarioTelefono": "3128935916"
+  },
+  {
+    "id": "calif-1782072782560",
+    "fecha": "2026-06-21T15:13:02",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Carlos Rivera ",
+    "usuarioTelefono": "3246830314"
+  },
+  {
+    "id": "calif-1782072804710",
+    "fecha": "2026-06-21T15:13:24",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Beatriz Rodríguez",
+    "usuarioTelefono": "3218111643"
+  },
+  {
+    "id": "calif-1782072815699",
+    "fecha": "2026-06-21T15:13:35",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Nelson Cifuentes ",
+    "usuarioTelefono": "3162310832"
+  },
+  {
+    "id": "calif-1782072826410",
+    "fecha": "2026-06-21T15:13:46",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "María Eugenia Osorio",
+    "usuarioTelefono": "3243202519"
+  },
+  {
+    "id": "calif-1782072860688",
+    "fecha": "2026-06-21T15:14:20",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Antonio Herrera",
+    "usuarioTelefono": "3146094729"
+  },
+  {
+    "id": "calif-1782072870106",
+    "fecha": "2026-06-21T15:14:30",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luisa Fernanda Muñoz",
+    "usuarioTelefono": "3116030375"
+  },
+  {
+    "id": "calif-1782072951964",
+    "fecha": "2026-06-21T15:15:51",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jakeline Rodríguez Bedoya ",
+    "usuarioTelefono": "3216461712"
+  },
+  {
+    "id": "calif-1782073108279",
+    "fecha": "2026-06-21T15:18:28",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 1,
+    "usuarioNombre": "Lucero Vega piedrahita",
+    "usuarioTelefono": "3022143822"
+  },
+  {
+    "id": "calif-1782073156709",
+    "fecha": "2026-06-21T15:19:16",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 1,
+    "usuarioNombre": "Lucero Vega piedrahita",
+    "usuarioTelefono": "3022143822"
+  },
+  {
+    "id": "calif-1782073244945",
+    "fecha": "2026-06-21T15:20:44",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 2,
+    "usuarioNombre": "Beatriz Rodas",
+    "usuarioTelefono": "3117880744"
+  },
+  {
+    "id": "calif-1782073297171",
+    "fecha": "2026-06-21T15:21:37",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Lina González ",
+    "usuarioTelefono": "3147042535"
+  },
+  {
+    "id": "calif-1782073327802",
+    "fecha": "2026-06-21T15:22:07",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "David Restrepo Morales ",
+    "usuarioTelefono": "3013966659"
+  },
+  {
+    "id": "calif-1782073365962",
+    "fecha": "2026-06-21T15:22:45",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Fabiola morales",
+    "usuarioTelefono": "3017601530"
+  },
+  {
+    "id": "calif-1782073369976",
+    "fecha": "2026-06-21T15:22:49",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 4,
+    "usuarioNombre": "Eudilver betancur",
+    "usuarioTelefono": "3117015612"
+  },
+  {
+    "id": "calif-1782073390005",
+    "fecha": "2026-06-21T15:23:10",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sandry Rendón ",
+    "usuarioTelefono": "3204266950"
+  },
+  {
+    "id": "calif-1782073668183",
+    "fecha": "2026-06-21T15:27:48",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 2,
+    "usuarioNombre": "Esneda Alfonso ",
+    "usuarioTelefono": "3207386561"
+  },
+  {
+    "id": "calif-1782074115413",
+    "fecha": "2026-06-21T15:35:15",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Laura Arias ",
+    "usuarioTelefono": "3148342519"
+  },
+  {
+    "id": "calif-1782074207177",
+    "fecha": "2026-06-21T15:36:47",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alejandra Guarin",
+    "usuarioTelefono": "3192315994"
+  },
+  {
+    "id": "calif-1782074257687",
+    "fecha": "2026-06-21T15:37:37",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Santiago Henao",
+    "usuarioTelefono": "3105052521"
+  },
+  {
+    "id": "calif-1782074435116",
+    "fecha": "2026-06-21T15:40:35",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 2,
+    "usuarioNombre": "Carlos Arturo Loaiza ",
+    "usuarioTelefono": "3117596022"
+  },
+  {
+    "id": "calif-1782074449179",
+    "fecha": "2026-06-21T15:40:49",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Martha Berrio",
+    "usuarioTelefono": "3117782189"
+  },
+  {
+    "id": "calif-1782074559725",
+    "fecha": "2026-06-21T15:42:39",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Carlos Andrés herrera quintero",
+    "usuarioTelefono": "3142944384"
+  },
+  {
+    "id": "calif-1782074587271",
+    "fecha": "2026-06-21T15:43:07",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "María José Álvarez Muñoz ",
+    "usuarioTelefono": "3015168742"
+  },
+  {
+    "id": "calif-1782074611832",
+    "fecha": "2026-06-21T15:43:31",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Carlos Hernán herrera ",
+    "usuarioTelefono": "3113122820"
+  },
+  {
+    "id": "calif-1782074627123",
+    "fecha": "2026-06-21T15:43:47",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Laura Inés Herrera ",
+    "usuarioTelefono": "3148169014"
+  },
+  {
+    "id": "calif-1782074654882",
+    "fecha": "2026-06-21T15:44:14",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sebastián Álvarez ",
+    "usuarioTelefono": "3178861195"
+  },
+  {
+    "id": "calif-1782074685402",
+    "fecha": "2026-06-21T15:44:45",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Ramón Alberto Álvarez ",
+    "usuarioTelefono": "3004439366"
+  },
+  {
+    "id": "calif-1782074709216",
+    "fecha": "2026-06-21T15:45:09",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Diana María Muñoz ",
+    "usuarioTelefono": "3015141859"
+  },
+  {
+    "id": "calif-1782074722651",
+    "fecha": "2026-06-21T15:45:22",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Blanca Inés quintero",
+    "usuarioTelefono": "3113122885"
+  },
+  {
+    "id": "calif-1782074741045",
+    "fecha": "2026-06-21T15:45:41",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Carlos Ariel salinas ",
+    "usuarioTelefono": "3154106496"
+  },
+  {
+    "id": "calif-1782074786459",
+    "fecha": "2026-06-21T15:46:26",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Vanessa Andréa Gutiérrez ",
+    "usuarioTelefono": "3137295079"
+  },
+  {
+    "id": "calif-1782075430093",
+    "fecha": "2026-06-21T15:57:10",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luz stella Cardona Idarraga",
+    "usuarioTelefono": "3113883650"
+  },
+  {
+    "id": "calif-1782075479659",
+    "fecha": "2026-06-21T15:57:59",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 1,
+    "usuarioNombre": "Luz stella Cardona Idarraga",
+    "usuarioTelefono": "3113883650"
+  },
+  {
+    "id": "calif-1782076038007",
+    "fecha": "2026-06-21T16:07:18",
+    "talentoId": "david-ospina-1781628349236",
+    "talentoNombre": "DAVID OSPINA ",
+    "talentoRol": "instructor",
+    "voto": 5,
+    "usuarioNombre": "Cpgibe70@gmail.com",
+    "usuarioTelefono": "3127947602"
+  },
+  {
+    "id": "calif-1782076211477",
+    "fecha": "2026-06-21T16:10:11",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Claudia giraldo ",
+    "usuarioTelefono": "3127947602"
+  },
+  {
+    "id": "calif-1782076230369",
+    "fecha": "2026-06-21T16:10:30",
+    "talentoId": "mauricio-valencia-1781140536982",
+    "talentoNombre": "Mauricio Valencia",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Claudia giraldo ",
+    "usuarioTelefono": "3127947602"
+  },
+  {
+    "id": "calif-1782076251402",
+    "fecha": "2026-06-21T16:10:51",
+    "talentoId": "leidy-berrio-la-flaca-1781141342697",
+    "talentoNombre": "Leidy Berrio \"La Flaca\"",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Claudia giraldo ",
+    "usuarioTelefono": "3127947602"
+  },
+  {
+    "id": "calif-1782076268127",
+    "fecha": "2026-06-21T16:11:08",
+    "talentoId": "mauricio-galarzo-1781142066394",
+    "talentoNombre": "Mauricio Galarzo",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Claudia giraldo ",
+    "usuarioTelefono": "3127947602"
+  },
+  {
+    "id": "calif-1782076847962",
+    "fecha": "2026-06-21T16:20:47",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Yohana de la rosa ",
+    "usuarioTelefono": "301 6126742"
+  },
+  {
+    "id": "calif-1782076893519",
+    "fecha": "2026-06-21T16:21:33",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Wilder Quitian ",
+    "usuarioTelefono": "321 7817413"
+  },
+  {
+    "id": "calif-1782076932128",
+    "fecha": "2026-06-21T16:22:12",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Camilo Duque ",
+    "usuarioTelefono": "300 8841928"
+  },
+  {
+    "id": "calif-1782076976169",
+    "fecha": "2026-06-21T16:22:56",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Carolina Pérez ",
+    "usuarioTelefono": "316 8348689"
+  },
+  {
+    "id": "calif-1782077032679",
+    "fecha": "2026-06-21T16:23:52",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alejandra villa ",
+    "usuarioTelefono": "+57 301 7625114"
+  },
+  {
+    "id": "calif-1782077071179",
+    "fecha": "2026-06-21T16:24:31",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jorge Sucerquia ",
+    "usuarioTelefono": "310 3823715"
+  },
+  {
+    "id": "calif-1782077118257",
+    "fecha": "2026-06-21T16:25:18",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Angelita Reinosa ",
+    "usuarioTelefono": "301 2553429"
+  },
+  {
+    "id": "calif-1782077150960",
+    "fecha": "2026-06-21T16:25:50",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Lina Serna ",
+    "usuarioTelefono": "314 8146013‬"
+  },
+  {
+    "id": "calif-1782077182973",
+    "fecha": "2026-06-21T16:26:22",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alejandra Jimenez ",
+    "usuarioTelefono": "301 7442554"
+  },
+  {
+    "id": "calif-1782077216309",
+    "fecha": "2026-06-21T16:26:56",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Manuela Perez ",
+    "usuarioTelefono": "320 3697053"
+  },
+  {
+    "id": "calif-1782077243386",
+    "fecha": "2026-06-21T16:27:23",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Felipe Lopez ",
+    "usuarioTelefono": "313 5631645"
+  },
+  {
+    "id": "calif-1782077270554",
+    "fecha": "2026-06-21T16:27:50",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Daniela Muñoz ",
+    "usuarioTelefono": "+34 642 69 69 53"
+  },
+  {
+    "id": "calif-1782077301135",
+    "fecha": "2026-06-21T16:28:21",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Daniel Lopez ",
+    "usuarioTelefono": "310 4990529"
+  },
+  {
+    "id": "calif-1782077353897",
+    "fecha": "2026-06-21T16:29:13",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Santiago Zuluaga ",
+    "usuarioTelefono": "301 7969383"
+  },
+  {
+    "id": "calif-1782077380746",
+    "fecha": "2026-06-21T16:29:40",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Patricia Serna ",
+    "usuarioTelefono": "311 2122195"
+  },
+  {
+    "id": "calif-1782077413184",
+    "fecha": "2026-06-21T16:30:13",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jhonatan Botero ",
+    "usuarioTelefono": "320 3279775"
+  },
+  {
+    "id": "calif-1782077447279",
+    "fecha": "2026-06-21T16:30:47",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Yoiner Bartolo ",
+    "usuarioTelefono": "313 6556692"
+  },
+  {
+    "id": "calif-1782077486715",
+    "fecha": "2026-06-21T16:31:26",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alexander Henao ",
+    "usuarioTelefono": "321 6409677"
+  },
+  {
+    "id": "calif-1782077514461",
+    "fecha": "2026-06-21T16:31:54",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Julian Giraldo ",
+    "usuarioTelefono": "313 7925183"
+  },
+  {
+    "id": "calif-1782077546834",
+    "fecha": "2026-06-21T16:32:26",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Nelson Grisales ",
+    "usuarioTelefono": "+57 311 6104147"
+  },
+  {
+    "id": "calif-1782077578766",
+    "fecha": "2026-06-21T16:32:58",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Marcia Urrefo",
+    "usuarioTelefono": "301 3188059"
+  },
+  {
+    "id": "calif-1782077604886",
+    "fecha": "2026-06-21T16:33:24",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Daniel Piraquive ",
+    "usuarioTelefono": "301 2444222"
+  },
+  {
+    "id": "calif-1782077635623",
+    "fecha": "2026-06-21T16:33:55",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luz María Gomez ",
+    "usuarioTelefono": "314 8769653"
+  },
+  {
+    "id": "calif-1782077692321",
+    "fecha": "2026-06-21T16:34:52",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Mauricio Guapacha ",
+    "usuarioTelefono": "302 4669045"
+  },
+  {
+    "id": "calif-1782077721222",
+    "fecha": "2026-06-21T16:35:21",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "María Rodriguez ",
+    "usuarioTelefono": "304 6415379"
+  },
+  {
+    "id": "calif-1782077748473",
+    "fecha": "2026-06-21T16:35:48",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Natalia Vázquez ",
+    "usuarioTelefono": "312 6062399"
+  },
+  {
+    "id": "calif-1782077773865",
+    "fecha": "2026-06-21T16:36:13",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luisa Vanegas ",
+    "usuarioTelefono": "310 3918295"
+  },
+  {
+    "id": "calif-1782077800774",
+    "fecha": "2026-06-21T16:36:40",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alberto Rubio ",
+    "usuarioTelefono": "314 5102815"
+  },
+  {
+    "id": "calif-1782077840136",
+    "fecha": "2026-06-21T16:37:20",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "German Grisales ",
+    "usuarioTelefono": "321 7698295"
+  },
+  {
+    "id": "calif-1782077845922",
+    "fecha": "2026-06-21T16:37:25",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Orlando Aguirre Restrepo ",
+    "usuarioTelefono": "3104437828"
+  },
+  {
+    "id": "calif-1782077866420",
+    "fecha": "2026-06-21T16:37:46",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Victoria Rivas ",
+    "usuarioTelefono": "313 6675658"
+  },
+  {
+    "id": "calif-1782077892943",
+    "fecha": "2026-06-21T16:38:12",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Evelio Londoño ",
+    "usuarioTelefono": "312 2577635"
+  },
+  {
+    "id": "calif-1782077920389",
+    "fecha": "2026-06-21T16:38:40",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Esteban Diaz ",
+    "usuarioTelefono": "314 8334837"
+  },
+  {
+    "id": "calif-1782077941149",
+    "fecha": "2026-06-21T16:39:01",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Mery Henao ",
+    "usuarioTelefono": "300 6560438"
+  },
+  {
+    "id": "calif-1782077966943",
+    "fecha": "2026-06-21T16:39:26",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luz Dary Giraldo ",
+    "usuarioTelefono": "320 7187374"
+  },
+  {
+    "id": "calif-1782078014726",
+    "fecha": "2026-06-21T16:40:14",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Paola  Valencia ",
+    "usuarioTelefono": "+57 317 2554221"
+  },
+  {
+    "id": "calif-1782078061194",
+    "fecha": "2026-06-21T16:41:01",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "William pulido ",
+    "usuarioTelefono": "321 5058444"
+  },
+  {
+    "id": "calif-1782078102358",
+    "fecha": "2026-06-21T16:41:42",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Samuel Grisales ",
+    "usuarioTelefono": "311 3178657"
+  },
+  {
+    "id": "calif-1782078115948",
+    "fecha": "2026-06-21T16:41:55",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jonathan Velasco ",
+    "usuarioTelefono": "3006815542"
+  },
+  {
+    "id": "calif-1782078127234",
+    "fecha": "2026-06-21T16:42:07",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Felipe Castaño ",
+    "usuarioTelefono": "318 4103094"
+  },
+  {
+    "id": "calif-1782078163401",
+    "fecha": "2026-06-21T16:42:43",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Angela Restrepo ",
+    "usuarioTelefono": "314 8639885"
+  },
+  {
+    "id": "calif-1782078216295",
+    "fecha": "2026-06-21T16:43:36",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Felipe Vanegas ",
+    "usuarioTelefono": "310 5001567‬"
+  },
+  {
+    "id": "calif-1782078360301",
+    "fecha": "2026-06-21T16:46:00",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Martha Lucía Gallego ",
+    "usuarioTelefono": "315 4118426‬"
+  },
+  {
+    "id": "calif-1782078365209",
+    "fecha": "2026-06-21T16:46:05",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Angela correa",
+    "usuarioTelefono": "3157814799"
+  },
+  {
+    "id": "calif-1782078400210",
+    "fecha": "2026-06-21T16:46:40",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juanita Lopez ",
+    "usuarioTelefono": "312 7974739"
+  },
+  {
+    "id": "calif-1782078441061",
+    "fecha": "2026-06-21T16:47:21",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Mateo Ortiz ",
+    "usuarioTelefono": "+57 313 7419572"
+  },
+  {
+    "id": "calif-1782078458195",
+    "fecha": "2026-06-21T16:47:38",
+    "talentoId": "victoria-de-las-flores-douglass-risso-1781630999255",
+    "talentoNombre": "VICTORIA DE LAS FLORES  &  DOUGLASS RISSO ",
+    "talentoRol": "instructor",
+    "voto": 5,
+    "usuarioNombre": "Angela correa",
+    "usuarioTelefono": "3157814799"
+  },
+  {
+    "id": "calif-1782078467288",
+    "fecha": "2026-06-21T16:47:47",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Natalia Betancur ",
+    "usuarioTelefono": "314 7011647"
+  },
+  {
+    "id": "calif-1782078481076",
+    "fecha": "2026-06-21T16:48:01",
+    "talentoId": "suly-pachon-jhonathan-pachon-1781630749851",
+    "talentoNombre": "SULY PACHON & JHONATHAN PACHON",
+    "talentoRol": "instructor",
+    "voto": 5,
+    "usuarioNombre": "Angela correa",
+    "usuarioTelefono": "3157814799"
+  },
+  {
+    "id": "calif-1782078501721",
+    "fecha": "2026-06-21T16:48:21",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jaime Ocampo ",
+    "usuarioTelefono": "320 7824324"
+  },
+  {
+    "id": "calif-1782078529939",
+    "fecha": "2026-06-21T16:48:49",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Victoria Mancera ",
+    "usuarioTelefono": "310 8299676"
+  },
+  {
+    "id": "calif-1782078565816",
+    "fecha": "2026-06-21T16:49:25",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Mairyn Hernández ",
+    "usuarioTelefono": "‪313 5276732‬"
+  },
+  {
+    "id": "calif-1782078625324",
+    "fecha": "2026-06-21T16:50:25",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luis Guillermo García ",
+    "usuarioTelefono": "312 8505525"
+  },
+  {
+    "id": "calif-1782078640581",
+    "fecha": "2026-06-21T16:50:40",
+    "talentoId": "suly-pachon-jhonathan-pachon-1781630749851",
+    "talentoNombre": "SULY PACHON & JHONATHAN PACHON",
+    "talentoRol": "instructor",
+    "voto": 5,
+    "usuarioNombre": "Sigifredo Giraldo ",
+    "usuarioTelefono": "3207336523"
+  },
+  {
+    "id": "calif-1782078660280",
+    "fecha": "2026-06-21T16:51:00",
+    "talentoId": "victoria-de-las-flores-douglass-risso-1781630999255",
+    "talentoNombre": "VICTORIA DE LAS FLORES  &  DOUGLASS RISSO ",
+    "talentoRol": "instructor",
+    "voto": 5,
+    "usuarioNombre": "Sigifredo Giraldo ",
+    "usuarioTelefono": "3207336523"
+  },
+  {
+    "id": "calif-1782078678765",
+    "fecha": "2026-06-21T16:51:18",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Vannesa Sánchez ",
+    "usuarioTelefono": "323 4847622"
+  },
+  {
+    "id": "calif-1782078692408",
+    "fecha": "2026-06-21T16:51:32",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sigifredo Giraldo ",
+    "usuarioTelefono": "3207336523"
+  },
+  {
+    "id": "calif-1782078710818",
+    "fecha": "2026-06-21T16:51:50",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Adriana Ramirez ",
+    "usuarioTelefono": "320 7286855"
+  },
+  {
+    "id": "calif-1782078740711",
+    "fecha": "2026-06-21T16:52:20",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Lina Gonzales ",
+    "usuarioTelefono": "314 7042535"
+  },
+  {
+    "id": "calif-1782078769920",
+    "fecha": "2026-06-21T16:52:49",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Diego Mosquera ",
+    "usuarioTelefono": "315 2071335"
+  },
+  {
+    "id": "calif-1782078808051",
+    "fecha": "2026-06-21T16:53:28",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alejandro Cardona ",
+    "usuarioTelefono": "312 7399721"
+  },
+  {
+    "id": "calif-1782078847095",
+    "fecha": "2026-06-21T16:54:07",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Diogenes Alvarado ",
+    "usuarioTelefono": "324 6117499‬"
+  },
+  {
+    "id": "calif-1782080063722",
+    "fecha": "2026-06-21T17:14:23",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Vanessa Agudelo ",
+    "usuarioTelefono": "311 2242061"
+  },
+  {
+    "id": "calif-1782080100409",
+    "fecha": "2026-06-21T17:15:00",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Viviana Giraldo ",
+    "usuarioTelefono": "311 6453140"
+  },
+  {
+    "id": "calif-1782080162520",
+    "fecha": "2026-06-21T17:16:02",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Valeria Villegas ",
+    "usuarioTelefono": "320 7505912"
+  },
+  {
+    "id": "calif-1782080193030",
+    "fecha": "2026-06-21T17:16:33",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alejandra Gonzales ",
+    "usuarioTelefono": "311 7941413"
+  },
+  {
+    "id": "calif-1782080225295",
+    "fecha": "2026-06-21T17:17:05",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Cristian Giraldo ",
+    "usuarioTelefono": "316 5076675"
+  },
+  {
+    "id": "calif-1782080271521",
+    "fecha": "2026-06-21T17:17:51",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Adriana Gonzalez ",
+    "usuarioTelefono": "‪314 6023218‬"
+  },
+  {
+    "id": "calif-1782080339587",
+    "fecha": "2026-06-21T17:18:59",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luis Fernando Gutierrez ",
+    "usuarioTelefono": "‪314 5655642‬"
+  },
+  {
+    "id": "calif-1782080389183",
+    "fecha": "2026-06-21T17:19:49",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alexandra Suarez ",
+    "usuarioTelefono": "312 7212172"
+  },
+  {
+    "id": "calif-1782080440408",
+    "fecha": "2026-06-21T17:20:40",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Favio Vazco ",
+    "usuarioTelefono": "318 2594091"
+  },
+  {
+    "id": "calif-1782080440443",
+    "fecha": "2026-06-21T17:20:40",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Favio Vazco ",
+    "usuarioTelefono": "318 2594091"
+  },
+  {
+    "id": "calif-1782080440486",
+    "fecha": "2026-06-21T17:20:40",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Favio Vazco ",
+    "usuarioTelefono": "318 2594091"
+  },
+  {
+    "id": "calif-1782080473565",
+    "fecha": "2026-06-21T17:21:13",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Cristian Gonzales ",
+    "usuarioTelefono": "304 5779353"
+  },
+  {
+    "id": "calif-1782080505175",
+    "fecha": "2026-06-21T17:21:45",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Maria Estella García ",
+    "usuarioTelefono": "‪311 3410109‬"
+  },
+  {
+    "id": "calif-1782080524190",
+    "fecha": "2026-06-21T17:22:04",
+    "talentoId": "victoria-de-las-flores-douglass-risso-1781630999255",
+    "talentoNombre": "VICTORIA DE LAS FLORES  &  DOUGLASS RISSO ",
+    "talentoRol": "instructor",
+    "voto": 3,
+    "usuarioNombre": "Luz Angela betancourt",
+    "usuarioTelefono": "3116339126"
+  },
+  {
+    "id": "calif-1782080554082",
+    "fecha": "2026-06-21T17:22:34",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 3,
+    "usuarioNombre": "Luz Angela Betancourt ",
+    "usuarioTelefono": "3116339126"
+  },
+  {
+    "id": "calif-1782080556790",
+    "fecha": "2026-06-21T17:22:36",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juan Felipe Ramirez ",
+    "usuarioTelefono": "319 6806094"
+  },
+  {
+    "id": "calif-1782080583925",
+    "fecha": "2026-06-21T17:23:03",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juliana Ortiz ",
+    "usuarioTelefono": "315 2594474"
+  },
+  {
+    "id": "calif-1782080625288",
+    "fecha": "2026-06-21T17:23:45",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sebastian arias ",
+    "usuarioTelefono": "321 2529471"
+  },
+  {
+    "id": "calif-1782080673715",
+    "fecha": "2026-06-21T17:24:33",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sandra Betancur ",
+    "usuarioTelefono": "310 5944138"
+  },
+  {
+    "id": "calif-1782080722581",
+    "fecha": "2026-06-21T17:25:22",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Olga Gomez ",
+    "usuarioTelefono": "‪300 2063947‬"
+  },
+  {
+    "id": "calif-1782080786300",
+    "fecha": "2026-06-21T17:26:26",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luz Stella Valencia ",
+    "usuarioTelefono": "‪313 7315773‬"
+  },
+  {
+    "id": "calif-1782081193537",
+    "fecha": "2026-06-21T17:33:13",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luisa Fernanda Espitia González ",
+    "usuarioTelefono": "3122452278"
+  },
+  {
+    "id": "calif-1782081229974",
+    "fecha": "2026-06-21T17:33:49",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sofía Betancourt",
+    "usuarioTelefono": "3126126288"
+  },
+  {
+    "id": "calif-1782081621080",
+    "fecha": "2026-06-21T17:40:21",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Diego Velandia ",
+    "usuarioTelefono": "3222335339"
+  },
+  {
+    "id": "calif-1782081641119",
+    "fecha": "2026-06-21T17:40:41",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Fernando Cabrera ",
+    "usuarioTelefono": "3015290194"
+  },
+  {
+    "id": "calif-1782082990375",
+    "fecha": "2026-06-21T18:03:10",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Diego León Ospina Ramírez ",
+    "usuarioTelefono": "3113691534"
+  },
+  {
+    "id": "calif-1782083017524",
+    "fecha": "2026-06-21T18:03:37",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 1,
+    "usuarioNombre": "Diego León Ospina Ramírez ",
+    "usuarioTelefono": "3113691534"
+  },
+  {
+    "id": "calif-1782083652309",
+    "fecha": "2026-06-21T18:14:12",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Andrea Agudelo ",
+    "usuarioTelefono": "310 5006260"
+  },
+  {
+    "id": "calif-1782083687358",
+    "fecha": "2026-06-21T18:14:47",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Fredy Tabares ",
+    "usuarioTelefono": "+34 627 27 46 73"
+  },
+  {
+    "id": "calif-1782083724057",
+    "fecha": "2026-06-21T18:15:24",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Willi tamara ",
+    "usuarioTelefono": "304 4711872"
+  },
+  {
+    "id": "calif-1782083753475",
+    "fecha": "2026-06-21T18:15:53",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Patricia calvo ",
+    "usuarioTelefono": "318 8892242"
+  },
+  {
+    "id": "calif-1782083783245",
+    "fecha": "2026-06-21T18:16:23",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Fernando Villada ",
+    "usuarioTelefono": "314 8118248"
+  },
+  {
+    "id": "calif-1782083793822",
+    "fecha": "2026-06-21T18:16:33",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Lucia Castañeda cardenas ",
+    "usuarioTelefono": "3122772154"
+  },
+  {
+    "id": "calif-1782083813967",
+    "fecha": "2026-06-21T18:16:53",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 4,
+    "usuarioNombre": "Mariana castillo ",
+    "usuarioTelefono": "318 6948255"
+  },
+  {
+    "id": "calif-1782083845043",
+    "fecha": "2026-06-21T18:17:25",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Mayi Yepes ",
+    "usuarioTelefono": "320 8060479"
+  },
+  {
+    "id": "calif-1782083897364",
+    "fecha": "2026-06-21T18:18:17",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juan Gonzalo ",
+    "usuarioTelefono": "311 5745222"
+  },
+  {
+    "id": "calif-1782083928934",
+    "fecha": "2026-06-21T18:18:48",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Edwin Giraldo ",
+    "usuarioTelefono": "313 6627020"
+  },
+  {
+    "id": "calif-1782083962567",
+    "fecha": "2026-06-21T18:19:22",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Paula Leguisamon ",
+    "usuarioTelefono": "311 3837158"
+  },
+  {
+    "id": "calif-1782084041322",
+    "fecha": "2026-06-21T18:20:41",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sebastian Guerrero ",
+    "usuarioTelefono": "320 7714551"
+  },
+  {
+    "id": "calif-1782084169295",
+    "fecha": "2026-06-21T18:22:49",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juan Diego Gonzales ",
+    "usuarioTelefono": "314 5943813"
+  },
+  {
+    "id": "calif-1782084214096",
+    "fecha": "2026-06-21T18:23:34",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jorge quintero ",
+    "usuarioTelefono": "310 5067620"
+  },
+  {
+    "id": "calif-1782084239859",
+    "fecha": "2026-06-21T18:23:59",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Carolina Alzate ",
+    "usuarioTelefono": "323 2335520"
+  },
+  {
+    "id": "calif-1782084274556",
+    "fecha": "2026-06-21T18:24:34",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juan Carlos Torres ",
+    "usuarioTelefono": "300 2882778"
+  },
+  {
+    "id": "calif-1782084312067",
+    "fecha": "2026-06-21T18:25:12",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alexa Yepes ",
+    "usuarioTelefono": "300 6645397"
+  },
+  {
+    "id": "calif-1782084353178",
+    "fecha": "2026-06-21T18:25:53",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Andrés Quiceno ",
+    "usuarioTelefono": "314 5558462"
+  },
+  {
+    "id": "calif-1782084361566",
+    "fecha": "2026-06-21T18:26:01",
+    "talentoId": "mauricio-galarzo-1781142066394",
+    "talentoNombre": "Mauricio Galarzo",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Doris Ramirez",
+    "usuarioTelefono": "3004415528"
+  },
+  {
+    "id": "calif-1782084382063",
+    "fecha": "2026-06-21T18:26:22",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Daniela Chica ",
+    "usuarioTelefono": "321 7510657"
+  },
+  {
+    "id": "calif-1782084413590",
+    "fecha": "2026-06-21T18:26:53",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Leandro Gómez ",
+    "usuarioTelefono": "9 11 2190-4248"
+  },
+  {
+    "id": "calif-1782084465534",
+    "fecha": "2026-06-21T18:27:45",
+    "talentoId": "mauricio-galarzo-1781142066394",
+    "talentoNombre": "Mauricio Galarzo",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Lina Muñoz ",
+    "usuarioTelefono": "3217007651"
+  },
+  {
+    "id": "calif-1782084486857",
+    "fecha": "2026-06-21T18:28:06",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Daniela Franco ",
+    "usuarioTelefono": "‪314 2281967‬"
+  },
+  {
+    "id": "calif-1782084519846",
+    "fecha": "2026-06-21T18:28:39",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Camilo Vázquez ",
+    "usuarioTelefono": "+34 614 42 01 46"
+  },
+  {
+    "id": "calif-1782084575375",
+    "fecha": "2026-06-21T18:29:35",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alejandra Orozco ",
+    "usuarioTelefono": "+52 56 5183 3588"
+  },
+  {
+    "id": "calif-1782084629726",
+    "fecha": "2026-06-21T18:30:29",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alejandra Martiñan ",
+    "usuarioTelefono": "+54 9 11 6365-4050"
+  },
+  {
+    "id": "calif-1782084672525",
+    "fecha": "2026-06-21T18:31:12",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Daly Orbes ",
+    "usuarioTelefono": "310 8212853"
+  },
+  {
+    "id": "calif-1782084793911",
+    "fecha": "2026-06-21T18:33:13",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alejandra Giraldo Valencia ",
+    "usuarioTelefono": "3104346496"
+  },
+  {
+    "id": "calif-1782086078004",
+    "fecha": "2026-06-21T18:54:38",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Johana ",
+    "usuarioTelefono": "3005532535"
+  },
+  {
+    "id": "calif-1782086199317",
+    "fecha": "2026-06-21T18:56:39",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Beatriz Rodriguez",
+    "usuarioTelefono": "3218111643"
+  },
+  {
+    "id": "calif-1782086220479",
+    "fecha": "2026-06-21T18:57:00",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Merly Herrera",
+    "usuarioTelefono": "3233459396"
+  },
+  {
+    "id": "calif-1782086243566",
+    "fecha": "2026-06-21T18:57:23",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Antonio Herrera",
+    "usuarioTelefono": "3146094729"
+  },
+  {
+    "id": "calif-1782086350469",
+    "fecha": "2026-06-21T18:59:10",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Leidy Quiroz",
+    "usuarioTelefono": "3148130915"
+  },
+  {
+    "id": "calif-1782086404971",
+    "fecha": "2026-06-21T19:00:04",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Diana Quiroz",
+    "usuarioTelefono": "3147479998"
+  },
+  {
+    "id": "calif-1782086472606",
+    "fecha": "2026-06-21T19:01:12",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Carol Quiroz",
+    "usuarioTelefono": "3145503229"
+  },
+  {
+    "id": "calif-1782086535442",
+    "fecha": "2026-06-21T19:02:15",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jesús Herrera",
+    "usuarioTelefono": "3146094729"
+  },
+  {
+    "id": "calif-1782086588905",
+    "fecha": "2026-06-21T19:03:08",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Merly Herrera Rodriguez ",
+    "usuarioTelefono": "3233459396"
+  },
+  {
+    "id": "calif-1782086653022",
+    "fecha": "2026-06-21T19:04:13",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Beatriz Rodríguez",
+    "usuarioTelefono": "3218111643"
+  },
+  {
+    "id": "calif-1782086720393",
+    "fecha": "2026-06-21T19:05:20",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Lina Gómez",
+    "usuarioTelefono": "3127222519"
+  },
+  {
+    "id": "calif-1782086819825",
+    "fecha": "2026-06-21T19:06:59",
+    "talentoId": "mauricio-galarzo-1781142066394",
+    "talentoNombre": "Mauricio Galarzo",
+    "talentoRol": "dj",
+    "voto": 3,
+    "usuarioNombre": "Lina Gómez",
+    "usuarioTelefono": "3127222519"
+  },
+  {
+    "id": "calif-1782086893197",
+    "fecha": "2026-06-21T19:08:13",
+    "talentoId": "leidy-berrio-la-flaca-1781141342697",
+    "talentoNombre": "Leidy Berrio \"La Flaca\"",
+    "talentoRol": "dj",
+    "voto": 3,
+    "usuarioNombre": "Merly Herrera",
+    "usuarioTelefono": "3233459396"
+  },
+  {
+    "id": "calif-1782086945650",
+    "fecha": "2026-06-21T19:09:05",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Lina Gómez",
+    "usuarioTelefono": "3127222519"
+  },
+  {
+    "id": "calif-1782087002041",
+    "fecha": "2026-06-21T19:10:02",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Lina Gómez",
+    "usuarioTelefono": "3127222519"
+  },
+  {
+    "id": "calif-1782087160675",
+    "fecha": "2026-06-21T19:12:40",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sara Ortiz",
+    "usuarioTelefono": "315393"
+  },
+  {
+    "id": "calif-1782087183371",
+    "fecha": "2026-06-21T19:13:03",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sara Ortiz",
+    "usuarioTelefono": "3153932075"
+  },
+  {
+    "id": "calif-1782087275318",
+    "fecha": "2026-06-21T19:14:35",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "María Fernanda",
+    "usuarioTelefono": "3116018914"
+  },
+  {
+    "id": "calif-1782087376382",
+    "fecha": "2026-06-21T19:16:16",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Merly Herrera",
+    "usuarioTelefono": "3233459396"
+  },
+  {
+    "id": "calif-1782087401895",
+    "fecha": "2026-06-21T19:16:41",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Antonio Herrera",
+    "usuarioTelefono": "3146094729"
+  },
+  {
+    "id": "calif-1782087402493",
+    "fecha": "2026-06-21T19:16:42",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Antonio Herrera",
+    "usuarioTelefono": "3146094729"
+  },
+  {
+    "id": "calif-1782087427522",
+    "fecha": "2026-06-21T19:17:07",
+    "talentoId": "merly-herrera-1781140199248",
+    "talentoNombre": "Merly Herrera",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Beatriz Rodriguez",
+    "usuarioTelefono": "3218111643"
+  },
+  {
+    "id": "calif-1782088113316",
+    "fecha": "2026-06-21T19:28:33",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Valentina piedrahita ",
+    "usuarioTelefono": "301 3295120"
+  },
+  {
+    "id": "calif-1782088156252",
+    "fecha": "2026-06-21T19:29:16",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Milena Escobar ",
+    "usuarioTelefono": "301 6599067"
+  },
+  {
+    "id": "calif-1782088198781",
+    "fecha": "2026-06-21T19:29:58",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Johana Lopez ",
+    "usuarioTelefono": "311 3985887"
+  },
+  {
+    "id": "calif-1782088224101",
+    "fecha": "2026-06-21T19:30:24",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sebastiana Ospina ",
+    "usuarioTelefono": "310 4183898"
+  },
+  {
+    "id": "calif-1782088255739",
+    "fecha": "2026-06-21T19:30:55",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Adriana Villa ",
+    "usuarioTelefono": "304 5796084"
+  },
+  {
+    "id": "calif-1782088283177",
+    "fecha": "2026-06-21T19:31:23",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Belen Osorio",
+    "usuarioTelefono": "3108532916"
+  },
+  {
+    "id": "calif-1782088284087",
+    "fecha": "2026-06-21T19:31:24",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Katalina Suárez ",
+    "usuarioTelefono": "311 6473229"
+  },
+  {
+    "id": "calif-1782088322902",
+    "fecha": "2026-06-21T19:32:02",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "María Angélica Villa",
+    "usuarioTelefono": "312 7090394"
+  },
+  {
+    "id": "calif-1782088348207",
+    "fecha": "2026-06-21T19:32:28",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jennifer Bastidas ",
+    "usuarioTelefono": "311 7785013"
+  },
+  {
+    "id": "calif-1782088373431",
+    "fecha": "2026-06-21T19:32:53",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Aura Bedoya",
+    "usuarioTelefono": "310 2873905"
+  },
+  {
+    "id": "calif-1782088383623",
+    "fecha": "2026-06-21T19:33:03",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sandra Buritica ",
+    "usuarioTelefono": "316 7297382"
+  },
+  {
+    "id": "calif-1782088408961",
+    "fecha": "2026-06-21T19:33:28",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Socorro Arango ",
+    "usuarioTelefono": "312 2332965"
+  },
+  {
+    "id": "calif-1782088410380",
+    "fecha": "2026-06-21T19:33:30",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juliana Naranjo",
+    "usuarioTelefono": "320 3933387"
+  },
+  {
+    "id": "calif-1782088435857",
+    "fecha": "2026-06-21T19:33:55",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Luz Ángela Betancur ",
+    "usuarioTelefono": "314 8746749"
+  },
+  {
+    "id": "calif-1782088450860",
+    "fecha": "2026-06-21T19:34:10",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Paula Leguizamon",
+    "usuarioTelefono": "311 3837158"
+  },
+  {
+    "id": "calif-1782088470050",
+    "fecha": "2026-06-21T19:34:30",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Ángela acosta ",
+    "usuarioTelefono": "301 3937644"
+  },
+  {
+    "id": "calif-1782088490673",
+    "fecha": "2026-06-21T19:34:50",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "José Humberto Duque",
+    "usuarioTelefono": "312 8841961"
+  },
+  {
+    "id": "calif-1782088499658",
+    "fecha": "2026-06-21T19:34:59",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "María Fernanda Rivera ",
+    "usuarioTelefono": "311 3746927"
+  },
+  {
+    "id": "calif-1782088522095",
+    "fecha": "2026-06-21T19:35:22",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sebastian Guerrero",
+    "usuarioTelefono": "320 7714551"
+  },
+  {
+    "id": "calif-1782088524028",
+    "fecha": "2026-06-21T19:35:24",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Natalia Guapacha ",
+    "usuarioTelefono": "321 7109882"
+  },
+  {
+    "id": "calif-1782088552983",
+    "fecha": "2026-06-21T19:35:52",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Javier Taborda",
+    "usuarioTelefono": "301 3364432"
+  },
+  {
+    "id": "calif-1782088554089",
+    "fecha": "2026-06-21T19:35:54",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Ana María García ",
+    "usuarioTelefono": "+57 311 3171709"
+  },
+  {
+    "id": "calif-1782088584233",
+    "fecha": "2026-06-21T19:36:24",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jenny Zuluaga ",
+    "usuarioTelefono": "311 3182951"
+  },
+  {
+    "id": "calif-1782088584927",
+    "fecha": "2026-06-21T19:36:24",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Carolina Alzate",
+    "usuarioTelefono": "323 2335520"
+  },
+  {
+    "id": "calif-1782088610237",
+    "fecha": "2026-06-21T19:36:50",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Clemencia Cardona ",
+    "usuarioTelefono": "311 7756305"
+  },
+  {
+    "id": "calif-1782088623995",
+    "fecha": "2026-06-21T19:37:03",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sandra Cardona",
+    "usuarioTelefono": "313 8492977"
+  },
+  {
+    "id": "calif-1782088646698",
+    "fecha": "2026-06-21T19:37:26",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Kevin Ciro",
+    "usuarioTelefono": "311 7953667"
+  },
+  {
+    "id": "calif-1782088658068",
+    "fecha": "2026-06-21T19:37:38",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "María Eugenia Corpo",
+    "usuarioTelefono": "314 5210905"
+  },
+  {
+    "id": "calif-1782088680156",
+    "fecha": "2026-06-21T19:38:00",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Gabriel Estrada ",
+    "usuarioTelefono": "‪314 8146012‬"
+  },
+  {
+    "id": "calif-1782088686762",
+    "fecha": "2026-06-21T19:38:06",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Marcela Arango",
+    "usuarioTelefono": "+34 620 11 55 82"
+  },
+  {
+    "id": "calif-1782088708612",
+    "fecha": "2026-06-21T19:38:28",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Santiago Castillón ",
+    "usuarioTelefono": "301 5285783"
+  },
+  {
+    "id": "calif-1782088723266",
+    "fecha": "2026-06-21T19:38:43",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Andrés Quiceno ",
+    "usuarioTelefono": "314 5558462"
+  },
+  {
+    "id": "calif-1782088738251",
+    "fecha": "2026-06-21T19:38:58",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Daniela Posada ",
+    "usuarioTelefono": "302 3545658"
+  },
+  {
+    "id": "calif-1782088769775",
+    "fecha": "2026-06-21T19:39:29",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Maicol Rua ",
+    "usuarioTelefono": "+57 300 8883500"
+  },
+  {
+    "id": "calif-1782088811875",
+    "fecha": "2026-06-21T19:40:11",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Andres saldareiaga ",
+    "usuarioTelefono": "310 4297696‬"
+  },
+  {
+    "id": "calif-1782088865626",
+    "fecha": "2026-06-21T19:41:05",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jorge Marin ",
+    "usuarioTelefono": "300 9075249"
+  },
+  {
+    "id": "calif-1782088879604",
+    "fecha": "2026-06-21T19:41:19",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Martha Lucia Cardenas ",
+    "usuarioTelefono": "310 6639210"
+  },
+  {
+    "id": "calif-1782088897353",
+    "fecha": "2026-06-21T19:41:37",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juan José Henao ",
+    "usuarioTelefono": "312 6370495"
+  },
+  {
+    "id": "calif-1782088911413",
+    "fecha": "2026-06-21T19:41:51",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Camilo Vasquez",
+    "usuarioTelefono": "+34 614 42 01 46"
+  },
+  {
+    "id": "calif-1782088921547",
+    "fecha": "2026-06-21T19:42:01",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Rubén Taboada ",
+    "usuarioTelefono": "‪315 5090895‬"
+  },
+  {
+    "id": "calif-1782088950860",
+    "fecha": "2026-06-21T19:42:30",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juliana Restrepo ",
+    "usuarioTelefono": "312 2762004"
+  },
+  {
+    "id": "calif-1782088954813",
+    "fecha": "2026-06-21T19:42:34",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juan David Rodríguez ",
+    "usuarioTelefono": "312 7203786"
+  },
+  {
+    "id": "calif-1782088982611",
+    "fecha": "2026-06-21T19:43:02",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Nicolas Montoya",
+    "usuarioTelefono": "304 1100504"
+  },
+  {
+    "id": "calif-1782088984943",
+    "fecha": "2026-06-21T19:43:04",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Maricella Castrillon ",
+    "usuarioTelefono": "+51 925 061 260"
+  },
+  {
+    "id": "calif-1782089014505",
+    "fecha": "2026-06-21T19:43:34",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Carolina Morales ",
+    "usuarioTelefono": "320 6974253"
+  },
+  {
+    "id": "calif-1782089032457",
+    "fecha": "2026-06-21T19:43:52",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jhonnyer Bermúdez ",
+    "usuarioTelefono": "320 6516168"
+  },
+  {
+    "id": "calif-1782089057910",
+    "fecha": "2026-06-21T19:44:17",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jonathan Spitel",
+    "usuarioTelefono": "+54 9 11 6999-2355"
+  },
+  {
+    "id": "calif-1782089096128",
+    "fecha": "2026-06-21T19:44:56",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Paulo Andrés Vásquez ",
+    "usuarioTelefono": "301 6145599"
+  },
+  {
+    "id": "calif-1782089127140",
+    "fecha": "2026-06-21T19:45:27",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Sebastián Quintero ",
+    "usuarioTelefono": "312 8148354"
+  },
+  {
+    "id": "calif-1782089157782",
+    "fecha": "2026-06-21T19:45:57",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Andrey Vega",
+    "usuarioTelefono": "316 8225730"
+  },
+  {
+    "id": "calif-1782089196204",
+    "fecha": "2026-06-21T19:46:36",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Adriana Gomez",
+    "usuarioTelefono": "321 3087703"
+  },
+  {
+    "id": "calif-1782089230200",
+    "fecha": "2026-06-21T19:47:10",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Leonardo Bedoya",
+    "usuarioTelefono": "314 2424491"
+  },
+  {
+    "id": "calif-1782089262704",
+    "fecha": "2026-06-21T19:47:42",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Oswaldo",
+    "usuarioTelefono": "442 391 9345"
+  },
+  {
+    "id": "calif-1782089301888",
+    "fecha": "2026-06-21T19:48:21",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Claudia Martinez",
+    "usuarioTelefono": "310 8527906"
+  },
+  {
+    "id": "calif-1782089333784",
+    "fecha": "2026-06-21T19:48:53",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Alejandro Ruiz",
+    "usuarioTelefono": "+52 55 6338 4627"
+  },
+  {
+    "id": "calif-1782089368089",
+    "fecha": "2026-06-21T19:49:28",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jesús Díaz",
+    "usuarioTelefono": "314 3928479"
+  },
+  {
+    "id": "calif-1782089405732",
+    "fecha": "2026-06-21T19:50:05",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Heberth Cifuentes",
+    "usuarioTelefono": "315 4600627"
+  },
+  {
+    "id": "calif-1782089442369",
+    "fecha": "2026-06-21T19:50:42",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Samuel Hurtado ",
+    "usuarioTelefono": "310 5405367"
+  },
+  {
+    "id": "calif-1782089475710",
+    "fecha": "2026-06-21T19:51:15",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Santiago Salazar",
+    "usuarioTelefono": "321 5624734"
+  },
+  {
+    "id": "calif-1782089603543",
+    "fecha": "2026-06-21T19:53:23",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Cynthia Reed",
+    "usuarioTelefono": "+57 320 4749249"
+  },
+  {
+    "id": "calif-1782089650676",
+    "fecha": "2026-06-21T19:54:10",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Felipe Sánchez",
+    "usuarioTelefono": "316 5667021"
+  },
+  {
+    "id": "calif-1782089735137",
+    "fecha": "2026-06-21T19:55:35",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Jhonny Pamplona",
+    "usuarioTelefono": "302 3417411"
+  },
+  {
+    "id": "calif-1782089778399",
+    "fecha": "2026-06-21T19:56:18",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Martín Mendieta",
+    "usuarioTelefono": "310 8316748"
+  },
+  {
+    "id": "calif-1782089828860",
+    "fecha": "2026-06-21T19:57:08",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Ferney Ospina",
+    "usuarioTelefono": "313 7062000"
+  },
+  {
+    "id": "calif-1782089864883",
+    "fecha": "2026-06-21T19:57:44",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Javier Rodriguez",
+    "usuarioTelefono": "+54 9 11 5762-5900"
+  },
+  {
+    "id": "calif-1782089914553",
+    "fecha": "2026-06-21T19:58:34",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Giovanni Bedoya",
+    "usuarioTelefono": "310 3738383"
+  },
+  {
+    "id": "calif-1782089944574",
+    "fecha": "2026-06-21T19:59:04",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Stiwar Calle",
+    "usuarioTelefono": "315 3211668"
+  },
+  {
+    "id": "calif-1782089977917",
+    "fecha": "2026-06-21T19:59:37",
+    "talentoId": "mayra-alejandra-nieto-1781139866280",
+    "talentoNombre": "Mayra Alejandra Nieto",
+    "talentoRol": "dj",
+    "voto": 5,
+    "usuarioNombre": "Juan Gabriel Contreras",
+    "usuarioTelefono": "320 7137786"
   }
 ]
