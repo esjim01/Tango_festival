@@ -260,6 +260,11 @@ async function cargarDatosPanelMaestro() {
         window.politicaReglasActuales = Array.isArray(datos.configuracion.politica_reglas) ? datos.configuracion.politica_reglas : [];
         renderPoliticaReglas();
 
+        // Calendario de Actividades
+        if (datos.configuracion.calendario_tabs) {
+            renderCalendarioAdmin(datos.configuracion.calendario_tabs);
+        }
+
         paquetesLocales = Array.isArray(datos.paquetes) ? datos.paquetes : [];
         renderPaquetesAdmin();
 

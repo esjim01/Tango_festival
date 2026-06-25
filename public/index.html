@@ -82,6 +82,7 @@
             <!-- Menú de Escritorio -->
             <div class="hidden md:flex items-center gap-8">
                 <a href="#paquetes" class="text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold">Paquetes</a>
+                <a href="#calendario" class="text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold">Calendario</a>
                 <a href="#maestros" class="text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold">Maestros</a>
                 <a href="#taxi-dancers" class="text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold">Taxi Dancers</a>
                 <a href="#djs" class="text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold">DJs</a>
@@ -100,6 +101,7 @@
         <div id="menu-mobile" class="hidden flex-col bg-stone-950/95 backdrop-blur-lg border-b border-gold/10 md:hidden transition-all duration-300">
             <div class="flex flex-col px-6 py-4 space-y-4">
                 <a href="#paquetes" class="mobile-link text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold py-2 border-b border-stone-900">Paquetes</a>
+                <a href="#calendario" class="mobile-link text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold py-2 border-b border-stone-900">Calendario</a>
                 <a href="#maestros" class="mobile-link text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold py-2 border-b border-stone-900">Maestros</a>
                 <a href="#taxi-dancers" class="mobile-link text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold py-2 border-b border-stone-900">Taxi Dancers</a>
                 <a href="#djs" class="mobile-link text-[10px] uppercase tracking-widest text-stone-300 hover:text-gold transition-colors font-bold py-2 border-b border-stone-900">DJs</a>
@@ -189,6 +191,41 @@
             </div>
         </section>
 
+        <!-- SECCIÓN CALENDARIO DE ACTIVIDADES -->
+        <section id="calendario" class="mb-24 scroll-mt-24">
+            <div class="package-title-border mb-10">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-center text-gold uppercase tracking-[0.2em]">Calendario de Actividades</h2>
+            </div>
+            <p class="text-center text-stone-400 text-xs font-bold mb-10 tracking-[0.3em] uppercase">Programa completo del festival</p>
+
+            <!-- Pestañas de navegación -->
+            <div class="flex justify-center gap-2 mb-8" id="calendario-tabs-nav">
+                <!-- Se inyectan dinámicamente desde app.js -->
+            </div>
+
+            <!-- Contenido de cada pestaña -->
+            <div id="calendario-tabs-content" class="relative min-h-[200px]">
+                <!-- Se inyecta dinámicamente desde app.js -->
+            </div>
+        </section>
+
+        <!-- MODAL LIGHTBOX PARA IMÁGENES DEL CALENDARIO -->
+        <div id="calendario-lightbox" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/90 backdrop-blur-md p-4" onclick="cerrarLightbox(event)">
+            <button onclick="cerrarLightbox()" class="absolute top-4 right-4 text-white/70 hover:text-white z-10 p-2 rounded-full hover:bg-white/10 transition-all">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <button id="lb-prev" onclick="navegarLightbox(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-gold z-10 p-3 rounded-full hover:bg-white/10 transition-all">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15,18 9,12 15,6"></polyline></svg>
+            </button>
+            <button id="lb-next" onclick="navegarLightbox(1)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-gold z-10 p-3 rounded-full hover:bg-white/10 transition-all">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,6 15,12 9,18"></polyline></svg>
+            </button>
+            <div class="relative max-w-5xl max-h-[90vh] w-full flex items-center justify-center">
+                <img id="lb-img" src="" alt="Calendario" class="max-h-[85vh] max-w-full object-contain rounded-2xl shadow-2xl transition-opacity duration-300">
+                <div id="lb-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white/80 text-xs px-4 py-1 rounded-full backdrop-blur-sm"></div>
+            </div>
+        </div>
+
         <!-- Sección de Características Comunes -->
         <section class="mb-24 border-t border-b border-gold/20 py-16">
             <h3 class="text-center text-gold text-sm font-bold tracking-[0.3em] uppercase mb-12">Ambos paquetes incluyen:</h3>
@@ -235,7 +272,7 @@
                     <!-- Contenedor de la Imagen -->
                     <div class="flex justify-center w-full" data-astro-cid-wejsgauk="">
                         <img id="organizador-imagen"
-                             src="uploads/JorgeNel.webp" 
+                             src="uploads/jorge_actualizada.jpg"
                              alt="Jorge Nel Giraldo" 
                              width="500" 
                              height="600" 
@@ -590,8 +627,12 @@
                     <input type="text" id="calif-nombre" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
                 </div>
                 <div>
-                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1">Teléfono</label>
-                    <input type="tel" id="calif-telefono" required class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1">WhatsApp</label>
+                    <input type="tel" id="calif-telefono" required placeholder="Ej: +57 300 123 4567" class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mb-1">Ciudad</label>
+                    <input type="text" id="calif-ciudad" required placeholder="Ej: Medellín" class="w-full bg-stone-950 border border-stone-800 rounded-lg px-3 py-2 text-sm text-stone-200 focus:outline-none focus:border-amber-500">
                 </div>
                 <div class="text-center py-2">
                     <p class="text-stone-400 text-xs mb-2">Tu calificación:</p>

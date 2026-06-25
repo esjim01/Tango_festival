@@ -37,7 +37,12 @@ function normalizarData(db) {
                 { condicion: 'Cancelas dentro del mes antes del evento', reembolso: 'sin reembolso' }
             ],
             politica_explicacion: 'Esta política existe porque debemos asegurar hoteles, pagar comidas, reservar espacios para eventos, programar tours y hacer depósitos con anticipación. En Colombia, la mayoría de las reservas requieren el pago completo o un depósito mínimo del 50%.',
-            politica_advertencia: 'Bajo ninguna circunstancia —enfermedad, accidente, emergencia, situación familiar— se emitirán reembolsos más allá de los términos establecidos anteriormente.'
+            politica_advertencia: 'Bajo ninguna circunstancia —enfermedad, accidente, emergencia, situación familiar— se emitirán reembolsos más allá de los términos establecidos anteriormente.',
+            calendario_tabs: [
+                { nombre: 'Día 1', imagenes: [] },
+                { nombre: 'Día 2', imagenes: [] },
+                { nombre: 'Día 3', imagenes: [] }
+            ]
         },
         paquetes: [],
         talento: [],
@@ -54,6 +59,16 @@ function normalizarData(db) {
     if (!Array.isArray(data.paquetes)) data.paquetes = [];
     if (!Array.isArray(data.talento)) data.talento = [];
     if (!Array.isArray(data.inscripciones)) data.inscripciones = [];
+    if (!Array.isArray(data.configuracion.calendario_tabs) || data.configuracion.calendario_tabs.length !== 3) {
+        data.configuracion.calendario_tabs = [
+            { nombre: 'Día 1', imagenes: [] },
+            { nombre: 'Día 2', imagenes: [] },
+            { nombre: 'Día 3', imagenes: [] }
+        ];
+    }
+    data.configuracion.calendario_tabs.forEach(tab => {
+        if (!Array.isArray(tab.imagenes)) tab.imagenes = [];
+    });
     
     // Asegurar integridad de talento
     data.talento.forEach(persona => {

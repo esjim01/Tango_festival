@@ -6,7 +6,110 @@ document.addEventListener('DOMContentLoaded', () => {
     iniciarCuentaRegresiva();
     configurarMenuMobile();
     iniciarCarruselHotel();
+    configurarLightboxTeclado();
 });
+
+// ==========================================
+// CALENDARIO DE ACTIVIDADES — Tabs + Lightbox
+// ==========================================
+
+window.lbImagenes = [];   // Imágenes del tab activo
+window.lbIndexActual = 0; // Índice actual en lightbox
+
+function renderizarCalendario(tabs) {
+    const nav = document.getElementById('calendario-tabs-nav');
+    const content = document.getElementById('calendario-tabs-content');
+    if (!nav) return;
+
+    const seccion = document.getElementById('calendario');
+
+    // Si no hay imágenes en ninguna pestaña, ocultar la sección
+    const tieneImagenes = tabs.some(t => t.imagenes && t.imagenes.length > 0);
+    if (!tieneImagenes) {
+        if (seccion) seccion.style.display = 'none';
+        return;
+    }
+    if (seccion) seccion.style.display = '';
+
+    // Si existe el contenedor de contenido de tabs, lo ocultamos o vaciamos
+    if (content) {
+        content.style.display = 'none';
+    }
+
+    // Renderizar botones que abren el modal directamente
+    nav.innerHTML = tabs.map((tab, idx) => {
+        const tieneFotos = tab.imagenes && tab.imagenes.length > 0;
+        return `
+            <button 
+                id="cal-tab-btn-${idx}"
+                onclick="${tieneFotos ? `abrirLightbox(${idx}, 0)` : 'alert(\'Próximamente disponible\')'}"
+                class="cal-tab-btn px-6 py-3 text-xs font-bold uppercase tracking-widest rounded-full border border-gold/30 bg-black/40 text-gold hover:bg-gold hover:text-stone-950 hover:border-gold shadow-lg shadow-gold/5 transition-all duration-300">
+                ${tab.nombre}
+            </button>
+        `;
+    }).join('');
+
+    // Guardar referencia global de los tabs
+    window.calendarioTabs = tabs;
+}
+
+window.cambiarTabCalendario = function(idx) {
+    // Ya no se utiliza para cambiar paneles en la landing page
+    window.abrirLightbox(idx, 0);
+};
+
+window.abrirLightbox = function(tabIdx, imgIdx) {
+    const tabs = window.calendarioTabs;
+    if (!tabs || !tabs[tabIdx]) return;
+    
+    window.lbImagenes = tabs[tabIdx].imagenes;
+    window.lbIndexActual = imgIdx;
+    
+    const lb = document.getElementById('calendario-lightbox');
+    if (!lb) return;
+    lb.classList.remove('hidden');
+    lb.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    actualizarLightbox();
+};
+
+function actualizarLightbox() {
+    const img = document.getElementById('lb-img');
+    const counter = document.getElementById('lb-counter');
+    if (!img) return;
+    img.style.opacity = '0';
+    setTimeout(() => {
+        img.src = window.lbImagenes[window.lbIndexActual];
+        img.style.opacity = '1';
+    }, 150);
+    if (counter) counter.textContent = `${window.lbIndexActual + 1} / ${window.lbImagenes.length}`;
+}
+
+window.navegarLightbox = function(direccion) {
+    if (!window.lbImagenes || window.lbImagenes.length === 0) return;
+    window.lbIndexActual = (window.lbIndexActual + direccion + window.lbImagenes.length) % window.lbImagenes.length;
+    actualizarLightbox();
+};
+
+window.cerrarLightbox = function(event) {
+    if (event && event.target !== event.currentTarget) return;
+    const lb = document.getElementById('calendario-lightbox');
+    if (!lb) return;
+    lb.classList.add('hidden');
+    lb.classList.remove('flex');
+    document.body.style.overflow = '';
+};
+
+function configurarLightboxTeclado() {
+    document.addEventListener('keydown', (e) => {
+        const lb = document.getElementById('calendario-lightbox');
+        if (!lb || lb.classList.contains('hidden')) return;
+        if (e.key === 'Escape') window.cerrarLightbox();
+        if (e.key === 'ArrowRight') window.navegarLightbox(1);
+        if (e.key === 'ArrowLeft') window.navegarLightbox(-1);
+    });
+}
+
 
 // Lógica del Carrusel del Hotel
 function iniciarCarruselHotel() {
@@ -144,7 +247,7 @@ function tarjetaTalentoHtml(persona) {
                 <div class="mt-6 pt-4 border-t border-gold/10 flex items-center justify-between">
                     <div class="flex flex-col">
                         <span class="text-[9px] uppercase tracking-tighter text-stone-500 mb-1">Puntaje</span>
-                        <strong class="text-gold text-sm">${persona.promedio || '0'} <i class="fas fa-star text-[10px]"></i></strong>
+                        <strong class="text-gold text-sm">${persona.promedio || '0'} <i class="fas fa-star text-[10px] mr-0.5"></i> <span class="text-stone-500 text-[10px] font-normal">(${persona.votos || 0} votos)</span></strong>
                     </div>
                     <div class="flex space-x-1.5 XML-estrellas" data-id="${persona.id}">
                         ${[1,2,3,4,5].map(n => `<i class="far fa-star text-stone-700 hover:text-gold cursor-pointer transition-colors text-sm" data-voto="${n}"></i>`).join('')}
@@ -309,9 +412,14 @@ async function cargarContenidoCompleto() {
             });
             if (seccionCarrusel) seccionCarrusel.classList.remove('hidden');
             iniciarAnimacionCarrusel();
-        } else if (seccionCarrusel) {
+            } else if (seccionCarrusel) {
             seccionCarrusel.classList.add('hidden');
-        }
+            }
+
+            // Renderizar Calendario de Actividades
+            if (datos.configuracion?.calendario_tabs) {
+            renderizarCalendario(datos.configuracion.calendario_tabs);
+            }
 
         const heroPrincipal = document.getElementById('hero-principal');
         const heroBgBlurred = document.getElementById('hero-bg-blurred');
@@ -612,12 +720,13 @@ document.getElementById('form-calificacion').addEventListener('submit', async (e
     const estrellas = document.getElementById('calif-estrellas').value;
     const nombre = document.getElementById('calif-nombre').value;
     const telefono = document.getElementById('calif-telefono').value;
+    const ciudad = document.getElementById('calif-ciudad').value;
 
     try {
         const res = await fetch(`${API_URL}/calificaciones`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ talentoId, estrellas, nombre, telefono })
+            body: JSON.stringify({ talentoId, estrellas, nombre, telefono, ciudad })
         });
         const resultado = await res.json();
         if (res.ok) {

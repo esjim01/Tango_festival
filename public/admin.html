@@ -144,6 +144,14 @@
                         </div>
                     </div>
 
+                    <!-- SECCIÓN CALENDARIO -->
+                    <div class="pt-3 border-t border-stone-800 space-y-3">
+                        <span class="text-amber-500 text-[10px] font-bold uppercase tracking-wider block"><i class="fas fa-calendar-alt mr-1"></i> Gestión de Calendario</span>
+                        <div id="admin-calendario-container" class="space-y-4">
+                            <!-- Las pestañas se inyectan dinámicamente desde admin.js -->
+                        </div>
+                    </div>
+
                     <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-2 rounded-lg text-xs uppercase tracking-wider">Guardar Configuración General</button>
                 </form>
                 <div class="mt-4 text-[11px] text-stone-500" id="estado-config"></div>
@@ -285,6 +293,7 @@
 
     </main>
 
+    <script src="admin_calendario_logic.js"></script>
     <script src="admin.js"></script>
 </body>
 </html>

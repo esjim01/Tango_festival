@@ -45,12 +45,32 @@
       }
     ],
     "politica_explicacion": "Esta política existe porque debemos asegurar hoteles, pagar comidas, reservar espacios para eventos, programar tours y hacer depósitos con anticipación. En Colombia, la mayoría de las reservas requieren el pago completo o un depósito mínimo del 50%.",
-    "politica_advertencia": "Bajo ninguna circunstancia —enfermedad, accidente, emergencia, situación familiar— se emitirán reembolsos más allá de los términos establecidos anteriormente."
+    "politica_advertencia": "Bajo ninguna circunstancia —enfermedad, accidente, emergencia, situación familiar— se emitirán reembolsos más allá de los términos establecidos anteriormente.",
+    "calendario_tabs": [
+      {
+        "nombre": "Cronograma Semana",
+        "imagenes": [
+          "/uploads/1782347738742-cro_1.jpeg"
+        ]
+      },
+      {
+        "nombre": "Cronograma Fin de Semana",
+        "imagenes": [
+          "/uploads/1782347777853-cro_2.jpeg"
+        ]
+      },
+      {
+        "nombre": "Milongas",
+        "imagenes": [
+          "/uploads/1782347793427-milongas.jpeg"
+        ]
+      }
+    ]
   },
   "paquetes": [
     {
       "id": "package-1-1781632248892",
-      "nombre": "MILONGAS Y TALLERES",
+      "nombre": "paquete  Milongas/Talleres",
       "precio": "CONSULTAR PRECIO",
       "precio_pareja": "CONSULTAR PRECIO",
       "badge": "Viernes, Sabado y Domingo",
@@ -67,7 +87,7 @@
     },
     {
       "id": "package-2-1781632586877",
-      "nombre": "toda la semana  MILONGAS /TALLERES",
+      "nombre": "paquete toda la semana  MILONGAS /TALLERES",
       "precio": "CONSULTAR PRECIO",
       "precio_pareja": "CONSULTAR PRECIO",
       "badge": "de Lunes a Domingo",
@@ -78,6 +98,109 @@
         },
         {
           "texto": "12 TALLERES",
+          "incluido": true
+        }
+      ]
+    },
+    {
+      "id": "package-3-1782142582269",
+      "nombre": "paquete completo",
+      "precio": "consultar precio",
+      "precio_pareja": "consultar precio",
+      "badge": "lunes a Domingo",
+      "caracteristicas": [
+        {
+          "texto": "7 noches de hotel  ( Hotel sede del festival)",
+          "incluido": true
+        },
+        {
+          "texto": "7 milongas",
+          "incluido": true
+        },
+        {
+          "texto": "Hallowen milonga  Sabado",
+          "incluido": true
+        },
+        {
+          "texto": "milonga  de gala Viernes",
+          "incluido": true
+        },
+        {
+          "texto": "2 clases semiprivadas",
+          "incluido": true
+        },
+        {
+          "texto": "12 talleres grupales",
+          "incluido": true
+        },
+        {
+          "texto": "acceso a taxi dancers",
+          "incluido": true
+        },
+        {
+          "texto": "8 parejas maestras",
+          "incluido": true
+        },
+        {
+          "texto": "shows nocturnos",
+          "incluido": true
+        }
+      ]
+    },
+    {
+      "id": "package-4-1782144831863",
+      "nombre": "paquete fin de semana",
+      "precio": "consultar precio",
+      "precio_pareja": "consultar precio",
+      "badge": "Viernes  Sabado y Domingo",
+      "caracteristicas": [
+        {
+          "texto": "3 noches de hotel (sede del ferstival)",
+          "incluido": true
+        },
+        {
+          "texto": "3 milongas",
+          "incluido": true
+        },
+        {
+          "texto": "show nocturnos",
+          "incluido": true
+        },
+        {
+          "texto": "8 parejas Maestras",
+          "incluido": true
+        },
+        {
+          "texto": "12 talleres grupales",
+          "incluido": true
+        },
+        {
+          "texto": "acceso a taxi dancers",
+          "incluido": true
+        }
+      ]
+    },
+    {
+      "id": "package-5-1782145478162",
+      "nombre": "por clases o milongas",
+      "precio": "consultar precio",
+      "precio_pareja": "consultar precio",
+      "badge": "toda la semana",
+      "caracteristicas": [
+        {
+          "texto": "1 milonga o varias milongas",
+          "incluido": true
+        },
+        {
+          "texto": "1 taller  o varios talleres",
+          "incluido": true
+        },
+        {
+          "texto": "milonga halloween y concurso de disfraces",
+          "incluido": true
+        },
+        {
+          "texto": "milonga de gala viernes",
           "incluido": true
         }
       ]
@@ -304,15 +427,120 @@
         5,
         5,
         5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        3,
+        5,
+        5,
+        3,
         5
       ],
-      "promedio": 4.88
+      "promedio": 4.91
     },
     {
       "id": "merly-herrera-1781140199248",
       "nombre": "Merly Herrera",
       "rol": "dj",
-      "biografia": "Buen día, soy Merly Herrera Tango DJ. Casi todos nos conocemos.\n\nA lo largo de mi vida he tenido la oportunidad de bailar diferentes ritmos y desde hace aproximadamente 10 años comencé a formarme como bailarina de tango. \n\nTambién soy organizadora de milongas, milonguera y Tango DJ destacada en varias milongas de Medellín y una de las DJ oficiales en las milongas principales de la ciudad y he sido Tango DJ en milongas y festivales de otras ciudades de Colombia, como Manizales, Bogotá y Cali.\n\nMe alegra poder hacer parte de esta experiencia y espero compartamos y disfrutemos mucho este festival.\n¡Y bienvenidos a mi ciudad!",
+      "biografia": "A lo largo de mi vida he tenido la oportunidad de bailar diferentes ritmos musicales y desde hace aproximadamente ocho años comencé a formarme como bailarina de tango.\n\nTambién soy organizadora de milongas, milonguera y Tango DJ destacada en varias milongas de Medellín y una de las DJs oficiales en las milongas principales de la ciudad y he sido Tango DJ en milongas y festivales de otras ciudades de Colombia, como Manizales, Bogotá, Cali y Armenia.\n\nI'm Merly Herrera, Tango DJ.\nThroughout my life, I have had the opportunity to dance to different musical genres, and for about eight years I have been training as a tango dancer.\n\nI'm also a milonga organizer, milonguera and a prominent Tango DJ at several milongas in Medellín. I'm one of the official DJs at the city's main milongas, and I've also DJ'd at milongas and festivals in other Colombian cities, such as Manizales, Bogotá, Cali, and Armenia.\n\n",
       "foto": "/uploads/1781140199256-merly-herrera-jpg.jpg",
       "calificaciones": [
         5,
@@ -349,9 +577,18 @@
       "foto": "/uploads/1781140536993-mauricio-valencia-jpg.jpg",
       "calificaciones": [
         5,
+        5,
+        5,
+        5,
+        5,
+        1,
+        5,
+        3,
+        5,
+        2,
         5
       ],
-      "promedio": 5
+      "promedio": 4.18
     },
     {
       "id": "vladimir-shifrin-1781140823517",
@@ -370,9 +607,34 @@
       "foto": "/uploads/1781141342710-leidy-berrio-jpg.jpg",
       "calificaciones": [
         5,
-        3
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
       ],
-      "promedio": 4
+      "promedio": 4.93
     },
     {
       "id": "yuri-pritzer-1781141558415",
@@ -396,9 +658,11 @@
         5,
         5,
         5,
-        3
+        3,
+        5,
+        5
       ],
-      "promedio": 4.71
+      "promedio": 4.78
     },
     {
       "id": "ana-y-jorge-1781144164229",
@@ -439,6 +703,7 @@
       "biografia": "Julián es un bailarín colombiano que, desde los ocho años, ha encontrado en el tango una pasión y una herencia que corre por sus venas. Su infancia estuvo marcada por un legado familiar que, generación tras generación, ha dedicado su vida a la danza. Con más de 19 años de experiencia, viaja por el mundo llevando con orgullo el tango colombiano a festivales, teatros y escenarios, donde su baile se convierte en un puente cultural que conecta emociones, identidades y generaciones. Su talento también ha brillado en su país, siendo nueve veces campeón en Colombia (2008-2022), quinto lugar en el Campeonato Mundial de Tango en Buenos Aires (2017) y campeón en Quito, Ecuador (2016). Actualmente, enseña tango en varios países asiáticos, adaptando su método a contextos multiculturales y promoviendo este baile como un puente artístico y cultural.\nColombian dancer and instructor with 15 years of experience in dance, and National Tango de Pista Champion 2022. Throughout her career, she has participated in festivals, tours, and productions both nationally and internationally, developing solid stage and teaching experience. Specialized in tango, she has taught classes and workshops in various countries across Asia, Europe, and Latin America, sharing the cultural and human richness of this dance. Her pedagogical work focuses on social dance, where connection, listening, and communication between partners form the foundation of learning.\n",
       "foto": "/uploads/1781631631506-natalia-julian.png",
       "calificaciones": [
+        5,
         5
       ],
       "promedio": 5
@@ -449,8 +714,18 @@
       "rol": "instructor",
       "biografia": "MARISOL  Apasionada defensora del baile milonguero, Marisol se sumergió en el mundo del tango en 2005, formándose en Buenos Aires. Ha participado en numerosos espectáculos en Argentina y Colombia, y fue finalista del Campeonato Mundial de Tango en Buenos Aires. Actualmente reside en Bogotá, donde imparte clases de tango con calidez y precisión, organizando activamente milongas y eventos culturales en colaboración con reconocidos maestros argentinos y locales. Sus clases ofrecen una inmersión profunda en la esencia del tango: su técnica, emoción y comunidad.\n\nCarlos Ochoa, a tango, milonga, and waltz teacher and dancer from Bogotá with 16 years of experience, is a specialist in ballroom tango, two-time national professional ballroom tango champion, and third-place milonga world champion in Buenos Aires, Argentina, in 2023. Nationally recognized for his unmistakable traditional tango style—elegant, vibrant, joyful, creative, explosive, and expressive—that conveys a variety of emotions in both his dancing and his tango classes. These qualities make his tango teaching method invaluable for understanding tango not only through movement but also through feeling, enabling you to enjoy and understand the world of tango. Without a doubt, you will enjoy studying and learning from this great Colombian tango teacher and dancer.",
       "foto": "/uploads/1781631840141-carlos-marisol.png",
-      "calificaciones": [],
-      "promedio": 0
+      "calificaciones": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "promedio": 5
     },
     {
       "id": "mayi-yepes-camilo-bernal-1781630613096",
@@ -484,9 +759,10 @@
       "calificaciones": [
         5,
         5,
-        3
+        3,
+        5
       ],
-      "promedio": 4.33
+      "promedio": 4.5
     },
     {
       "id": "valentin-arias-diana-franco-1781631088373",
@@ -495,9 +771,19 @@
       "biografia": "Valentín Arias Delgado, a professional dancer, is the current European Champion at the 2026 European Dance Award Golden Hummingbird in Baden-Baden, Germany, and the 2020 World Tango Champion in Argentina. With a career spanning over 23 years, he has established himself as one of the leading exponents of tango, taking this art form to different parts of the world and achieving top rankings in numerous competitions. Titles obtained at the Tango Festival and the World Championship in Argentina: * 3rd Place, Tango Stage 2017 * World Runner-Up, Tango Stage 2018 * Best Foreign Couple and Audience Award – 2019 * World Champion, Tango Stage – 2020 * Semifinalist, Got Talent Spain – 2022 * Finalist, Tú Sí Que Vales – 2025 He has been invited to major tango festivals across Europe, Asia, and the Americas, where he has shared his expertise as a teacher and choreographer. * Declared Ambassador of Tango by Pro Tango Argentina, with the sponsorship of UNESCO, in Ecuador in 2019.",
       "foto": "/uploads/1781631893620-val-entin.png",
       "calificaciones": [
+        5,
         5
       ],
       "promedio": 5
+    },
+    {
+      "id": "grisha-nisnevich-1782334195867",
+      "nombre": "Grisha Nisnevich",
+      "rol": "instructor",
+      "biografia": "Grisha Nisnevich is a dynamic and influential figure in the world of Tango and guitar. Renowned as a Tango instructor, musician, lecturer, and DJ, he brings passion and expertise to every aspect of his work. With an active touring schedule, he captivates audiences worldwide with mesmerizing Tango performances and engaging educational experiences.",
+      "foto": "/uploads/1782334196172-grisha.jpeg",
+      "calificaciones": [],
+      "promedio": 0
     }
   ],
   "inscripciones": [

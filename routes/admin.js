@@ -156,7 +156,7 @@ router.get('/descargar/calificaciones', async (req, res) => {
         
         // Encabezados del CSV
         let csv = "\uFEFF"; // BOM para que Excel detecte UTF-8
-        csv += "ID Calificación,Fecha,ID Talento,Nombre Talento,Rol Talento,Puntaje,Nombre Usuario,Teléfono Usuario\n";
+        csv += "ID Calificación,Fecha,ID Talento,Nombre Talento,Rol Talento,Puntaje,Nombre Usuario,WhatsApp/Teléfono Usuario,Ciudad Usuario\n";
         
         calificaciones.forEach(c => {
             const fila = [
@@ -167,7 +167,8 @@ router.get('/descargar/calificaciones', async (req, res) => {
                 c.talentoRol,
                 c.voto,
                 c.usuarioNombre,
-                c.usuarioTelefono
+                c.usuarioTelefono,
+                c.usuarioCiudad || 'N/A'
             ];
             // Escapar comas y comillas para CSV seguro
             const filaSegura = fila.map(v => `"${String(v ?? '').replace(/"/g, '""')}"`).join(',');
@@ -346,6 +347,70 @@ router.post('/upload/banners', upload.array('bannerImages', 10), async (req, res
         res.status(201).json({ mensaje: 'Banners añadidos con éxito.', banners: db.configuracion.banners });
     } catch (error) {
         res.status(500).json({ error: 'Error al subir los banners.' });
+    }
+});
+
+// CALENDARIO: Subir imágenes a una pestaña específica (0, 1 o 2)
+router.post('/upload/calendario/:tabIndex', upload.array('calendarioImages', 20), async (req, res) => {
+    const tabIndex = parseInt(req.params.tabIndex, 10);
+    if (isNaN(tabIndex) || tabIndex < 0 || tabIndex > 2) return res.status(400).json({ error: 'Índice de pestaña inválido (debe ser 0, 1 o 2).' });
+    if (!req.files || req.files.length === 0) return res.status(400).json({ error: 'No se recibieron imágenes.' });
+
+    try {
+        const db = await leerBaseDatos();
+        const nuevasImagenes = req.files.map(f => `/uploads/${f.filename}`);
+        db.configuracion.calendario_tabs[tabIndex].imagenes = [
+            ...(db.configuracion.calendario_tabs[tabIndex].imagenes || []),
+            ...nuevasImagenes
+        ];
+        await guardarBaseDatos(db);
+        res.status(201).json({ mensaje: 'Imágenes añadidas al calendario.', tab: db.configuracion.calendario_tabs[tabIndex] });
+    } catch (error) {
+        console.error('Error al subir imágenes de calendario:', error);
+        res.status(500).json({ error: 'Error al subir las imágenes.' });
+    }
+});
+
+// CALENDARIO: Eliminar una imagen específica de una pestaña
+router.delete('/calendario/:tabIndex/:imgIndex', async (req, res) => {
+    const tabIndex = parseInt(req.params.tabIndex, 10);
+    const imgIndex = parseInt(req.params.imgIndex, 10);
+
+    if (isNaN(tabIndex) || tabIndex < 0 || tabIndex > 2) return res.status(400).json({ error: 'Índice de pestaña inválido.' });
+
+    try {
+        const db = await leerBaseDatos();
+        const tab = db.configuracion.calendario_tabs[tabIndex];
+
+        if (!tab || !tab.imagenes[imgIndex]) return res.status(404).json({ error: 'Imagen no encontrada.' });
+
+        const rutaImagen = tab.imagenes[imgIndex];
+        tab.imagenes.splice(imgIndex, 1);
+        await guardarBaseDatos(db);
+        await borrarArchivoSeguro(rutaImagen);
+
+        res.json({ mensaje: 'Imagen eliminada del calendario.', tab });
+    } catch (error) {
+        console.error('Error al eliminar imagen de calendario:', error);
+        res.status(500).json({ error: 'Error al eliminar la imagen.' });
+    }
+});
+
+// CALENDARIO: Actualizar nombre de una pestaña
+router.put('/calendario/:tabIndex/nombre', async (req, res) => {
+    const tabIndex = parseInt(req.params.tabIndex, 10);
+    const { nombre } = req.body;
+
+    if (isNaN(tabIndex) || tabIndex < 0 || tabIndex > 2) return res.status(400).json({ error: 'Índice de pestaña inválido.' });
+    if (!nombre || !nombre.trim()) return res.status(400).json({ error: 'El nombre de la pestaña es obligatorio.' });
+
+    try {
+        const db = await leerBaseDatos();
+        db.configuracion.calendario_tabs[tabIndex].nombre = nombre.trim();
+        await guardarBaseDatos(db);
+        res.json({ mensaje: 'Nombre de pestaña actualizado.', tab: db.configuracion.calendario_tabs[tabIndex] });
+    } catch (error) {
+        res.status(500).json({ error: 'Error al actualizar el nombre.' });
     }
 });
 

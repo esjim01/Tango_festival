@@ -22,8 +22,9 @@ router.get('/info', async (req, res) => {
         res.json({
             configuracion: db.configuracion,
             paquetes: db.paquetes,
-            talento: db.talento.map(({ id, nombre, rol, biografia, foto, promedio }) => ({
-                id, nombre, rol, biografia, foto, promedio
+            talento: db.talento.map(({ id, nombre, rol, biografia, foto, promedio, calificaciones }) => ({
+                id, nombre, rol, biografia, foto, promedio,
+                votos: calificaciones ? calificaciones.length : 0
             }))
         });
     } catch (error) {
@@ -99,33 +100,60 @@ router.post('/inscripciones', async (req, res) => {
     }
 });
 
+function obtenerCategoriaRol(rol) {
+    const normal = String(rol || '')
+        .toLowerCase()
+        .trim()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[_-]+/g, ' ')
+        .replace(/\s+/g, ' ');
+
+    if (['profesor', 'instructor', 'maestro', 'profesores', 'instructores', 'maestros'].includes(normal)) {
+        return 'instructor';
+    }
+    if (['taxi dancer', 'taxidancer', 'taxi dancers', 'taxidancers'].includes(normal)) {
+        return 'taxi dancer';
+    }
+    if (['dj', 'djs'].includes(normal)) {
+        return 'dj';
+    }
+    return normal;
+}
+
 // RUTA: Calificar talento
 router.post('/calificaciones', async (req, res) => {
-    const { talentoId, estrellas, nombre, telefono } = req.body;
+    const { talentoId, estrellas, nombre, telefono, ciudad } = req.body;
     const numEstrellas = Number(estrellas);
 
     if (!talentoId || isNaN(numEstrellas) || numEstrellas < 1 || numEstrellas > 5) {
         return res.status(400).json({ error: "Calificación inválida. Debe ser entre 1 y 5." });
     }
 
-    if (!nombre || !telefono) {
-        return res.status(400).json({ error: "Nombre y teléfono son obligatorios para calificar." });
+    if (!nombre || !telefono || !ciudad) {
+        return res.status(400).json({ error: "Nombre, WhatsApp y Ciudad son obligatorios para calificar." });
     }
 
     try {
-        const calificacionesDetalles = await leerCalificacionesDetalles();
-        const telefonoExiste = calificacionesDetalles.some(c => 
-            String(c.usuarioTelefono).trim() === String(telefono).trim()
-        );
-
-        if (telefonoExiste) {
-            return res.status(400).json({ error: "Este número de teléfono ya tiene un voto registrado." });
-        }
-
         const db = await leerBaseDatos();
         const persona = db.talento.find(t => t.id === talentoId);
 
         if (!persona) return res.status(404).json({ error: "El miembro del talento no existe." });
+
+        const calificacionesDetalles = await leerCalificacionesDetalles();
+        const categoriaNuevoVoto = obtenerCategoriaRol(persona.rol);
+
+        // Validar si el teléfono ya votó por un talento de la misma categoría de rol
+        const yaVotoPorCategoria = calificacionesDetalles.some(c => {
+            if (String(c.usuarioTelefono).trim() !== String(telefono).trim()) return false;
+            
+            // Determinar la categoría del voto histórico
+            const categoriaHistorica = obtenerCategoriaRol(c.talentoRol);
+            return categoriaHistorica === categoriaNuevoVoto;
+        });
+
+        if (yaVotoPorCategoria) {
+            return res.status(400).json({ error: `Este número ya registró un voto en la categoría: ${categoriaNuevoVoto.toUpperCase()}.` });
+        }
 
         persona.calificaciones.push(numEstrellas);
         const suma = persona.calificaciones.reduce((acc, curr) => acc + curr, 0);
@@ -142,7 +170,8 @@ router.post('/calificaciones', async (req, res) => {
             talentoRol: persona.rol,
             voto: numEstrellas,
             usuarioNombre: nombre,
-            usuarioTelefono: telefono
+            usuarioTelefono: telefono,
+            usuarioCiudad: ciudad
         });
         await guardarCalificacionesDetalles(calificacionesDetalles);
 
