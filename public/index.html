@@ -656,6 +656,22 @@
 
     <a id="btn-whatsapp" href="#" target="_blank" class="fixed bottom-6 right-6 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl z-50"><i class="fab fa-whatsapp"></i></a>
 
+    <script>
+        window.addEventListener('load', () => {
+            if (window.location.hash) {
+                // Buscamos la sección del ancla (ej: #djs)
+                const elemento = document.querySelector(window.location.hash);
+                if (elemento) {
+                    // Esperamos 300 milisegundos a que el móvil termine de renderizar el diseño
+                    setTimeout(() => {
+                        // Lo desplaza de forma fluida y lo alinea al inicio de la pantalla
+                        elemento.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 300);
+                }
+            }
+        });
+    </script>
+
     <script src="app.js?v=2"></script>
 </body>
 </html>
